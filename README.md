@@ -6,4 +6,4 @@ Cloud providers like Azure, Google, and AWS have changed the way organizations b
 # Resources Needed
 |Resource  | Dr. Hale needed? | Investigating Team member | Description |
 |-------------------|---------|---------------------------|-------------|
-
+|Sample AWS Account|No|Estabrook|Need to spin up a test AWS account, complete with S3 buckets|
