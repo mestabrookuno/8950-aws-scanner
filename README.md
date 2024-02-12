@@ -16,4 +16,6 @@ Organizations of all sizes would be able to benefit from having detailed baselin
 # Resources Needed
 |Resource  | Dr. Hale needed? | Investigating Team member | Description |
 |-------------------|---------|---------------------------|-------------|
-|Sample AWS Account|No|Estabrook|Need to spin up a test AWS account, complete with S3 buckets|
+|Sample AWS Account|No|Matt|Need to spin up a test AWS account, complete with S3 buckets|
+|Pentesting Tool|No|Grace|A pentesting solution will be needed to detect vulnerabilities in publicly accessible S3 buckets|
+|IaC Scripting Knowledge|Maybe|Mark|Some Infrastructure as Code (IaC) knowledge will be needed to help create the AWS configs. This may be a book, tutorials, or other training resources to help sharpen the team's knowledge of IaC|
