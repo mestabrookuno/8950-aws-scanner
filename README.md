@@ -16,6 +16,8 @@ Organizations of all sizes would be able to benefit from having detailed baselin
 # Resources Needed
 |Resource  | Dr. Hale needed? | Investigating Team member | Description |
 |-------------------|---------|---------------------------|-------------|
-|Sample AWS Account|No|Matt|Need to spin up a test AWS account, complete with S3 buckets|
-|Pentesting Tool|No|Grace|A pentesting solution will be needed to detect vulnerabilities in publicly accessible S3 buckets|
-|IaC Scripting Knowledge|Maybe|Mark|Some Infrastructure as Code (IaC) knowledge will be needed to help create the AWS configs. This may be a book, tutorials, or other training resources to help sharpen the team's knowledge of IaC|
+|Sample AWS Account|No|Matt|Need to spin up a test AWS account, complete with S3 buckets.|
+|Pentesting Tool|No|Grace|A pentesting solution will be needed to detect vulnerabilities in publicly accessible S3 buckets.|
+|IaC Scripting Knowledge|Maybe|Mark|Some Infrastructure as Code (IaC) knowledge will be needed to help create the AWS configs. This may be a book, tutorials, or other training resources to help sharpen the team's knowledge of IaC.|
+|Baseline Storage/Repository|No|Matt|There needs to be a working directory for the team to store baseline drafts and collaborate. This will likely be GitHub, but could be Google Docs, etc.|
+|DLP Tool|No|Grace|In order to identify sensitive data types shared publicly, a DLP (Data Loss Prevention) tool may help classify and detect data.|
