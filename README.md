@@ -40,6 +40,12 @@ A cross-section of research papers related to S3 bucket security are listed in t
 | AWS security cookbook : practical solutions for managing security policies, monitoring, auditing, and compliance with AWS | 2020 | Technical step by step help with baseline configuration
 de Oliveira, A. Securing Weak Points in Serverless Architectures. |   |  
 
+### Currently Available Tools: 
+Some tools were found to be potentially helpful as well. Those tools will be considered when crafting the baseline configurations. A large amount of documentation is available from AWS for the below tools. 
+- AWS Config helps ensure that S3 buckets adhere to the defined baseline configurations by continuously evaluating their settings and notifying administrators of any deviations.
+- CloudTrail provides visibility into changes made to S3 buckets and helps organizations track user activity and API usage for security monitoring and auditing purposes.
+- Security Hub aggregates and analyzes security findings from multiple AWS services, including AWS Config and CloudTrail, to identify security risks and compliance issues related to S3 buckets and other AWS resources.
+
 ## Technical Plan
 This project aims to bolster S3 bucket security. In order to do that, the project has been split into five key sections, each complete with subtasks needed to accomplish the overall goal, all listed below. 
 ### Step 1 - Develop the Baseline
@@ -66,13 +72,13 @@ Prescribed security tools such as AWS Config, AWS CloudTrail, and AWS Security H
 ### Step 3 - Test the Baseline
 After setting up the sandbox, penetration testing will be performed against the various sandbox setups, secured using the baseline configurations. Penetration testing should utilize available tooling such as Kali Linux and various other penetration testing tools and replicate the types of attacks that an attacker would be expected to carry out against an S3 bucket found in the real world. A mixture of automated tools and manual testing will be implemented to ensure test coverage. Custom scripts may be developed to support the testing as needed. 
 - Manual penetration testing to validate the security controls implemented by the baseline configurations and identify any weaknesses or vulnerabilities.
-### Step 4 - Review and Display Results:
-- Analyze the results of any test we will simultate to identify vulnerabilities.
-- How can the baseline be improved?
 
-## Currently Available Tools: 
-- AWS Config helps ensure that S3 buckets adhere to the defined baseline configurations by continuously evaluating their settings and notifying administrators of any deviations.
-- CloudTrail provides visibility into changes made to S3 buckets and helps organizations track user activity and API usage for security monitoring and auditing purposes.
-- Security Hub aggregates and analyzes security findings from multiple AWS services, including AWS Config and CloudTrail, to identify security risks and compliance issues related to S3 buckets and other AWS resources.
+### Step 4 - Review and Display Results
+Penetration test results from wide open buckets or buckets configured to some basic level of hardening will be used as a "control" to judge the effectiveness of the security baselines. For example, penetration testing of a wide open bucket should show a lot of vulnerabilities easily accessible by a hacker. In order to prove that the provided S3 baseline configurations actually have a marked impact on the security of S3 buckets, test results after should show a reduction in the number of vulnerabilities. 
 
+Results from initial baselines will be noted and shared. If there are glaring vulnerabilities that are not acceptable according to the baseline's level of intended security, modifications may need to be made to the baseline and the tests re-run. 
 
+### Step 5 - Automate Baseline Implementation
+Time is a luxury for most IT departments, and especially so for the smaller organizations that can stand to benefit from S3 baselines. It would be beneficial to also provide a means of automating the implementation of the developed baselines. This would mean that a system administrator or cloud administrator could implement the baseline recommendations by running a single script rather than hunting down potentially dozens of settings in the AWS console. 
+
+The AWS CLI can be used to run scripts, and AWS Cloudformation can also be used to automate the construction of security policies and settings. Both tools will be incorporated into this step and the most thorough, most convenient methods will be selected to put forth as an option for system administrators to use to implement the baselines. 
