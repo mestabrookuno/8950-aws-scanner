@@ -25,9 +25,12 @@ Organizations of all sizes would be able to benefit from having detailed baselin
 
 # Methodology
 ## Literature Review:
-- Gather information on common security best practices, industry standards, and regulatory requirements related to securing S3 buckets
-- Analyze past security incidents and data breaches involving misconfigured S3 buckets to identify common attack vectors and vulnerabilities
-  
+In order to get a sense of what work had already been done in the S3 bucket space a thorough literature review was started and is in progress. The literature review as it pertains to this project is broken up into two pieces: 
+1. Gather information on common security best practices, industry standards, and regulatory requirements related to securing S3 buckets
+2. Analyze past security incidents and data breaches involving misconfigured S3 buckets to identify common attack vectors and vulnerabilities
+
+A cross-section of research papers related to S3 bucket security are listed in the table below. 
+
 | Article | Date Published | Description/Summary |
 | -- | -- | -- |
 | There's a Hole in that Bucket!: A Large-scale Analysis of Misconfigured S3 Buckets | (2018) | The study aims to assess the prevalence and impact of misconfigurations in publicly accessible Amazon S3 buckets. Their methodology involves three steps:1. Candidate Generation: They use various methods to generate potential S3 bucket names since there is no public directory of valid bucket names. This includes creating acronyms and mutating dictionary words, leveraging web crawling to find linked buckets, and passive DNS data to find S3 domains.2. Scanner: Using the generated bucket names, they attempt to access the buckets via HTTPS requests to the S3 API. They check if the buckets exist and if they are publicly listable. They do not access personal files for privacy reasons.3. Inspector: For existing and publicly accessible buckets, they analyze their permission settings. They verify if files are readable and/or writable without accessing private files. They also check access control lists to study access control policies.Additionally, they inspect websites to identify those loading resources from S3 buckets and determine if those buckets are writable. If so, they conclude the website is vulnerable to resource infection attacks. These attacks could involve tampering with or delivering malicious content through the loaded resources.|
@@ -38,28 +41,29 @@ Organizations of all sizes would be able to benefit from having detailed baselin
 de Oliveira, A. Securing Weak Points in Serverless Architectures. |   |  
 
 ## Technical Plan
-1. Develop the baseline
+This project aims to bolster S3 bucket security. In order to do that, the project has been split into four key sections, each complete with subtasks needed to accomplish the overall goal, all listed below. 
+### Step 1 - Develop the Baseline
 - Define a set of baseline configurations and security controls for securing S3 buckets based on the collected data and analysis.
 - Tailor the baselines to meet the specific security requirements and compliance needs of different industries or verticals (ex: banking, retail, media…).
-  - Example of security requirement; Health system HIPAA<
+  - Example of security requirement; Health system HIPAA
 - Define Baseline Configuration: Based on the identified security requirements and AWS best practices, we should define a baseline configuration for S3 buckets. settings related to access control, encryption, logging, and versioning.
   - Access Control: Determine the access control policies buckets, including permissions for IAM users, roles, and groups. Implement the principle of least privilege to ensure that only authorized users have access to the buckets and their contents.
   - Encryption: Decide on encryption requirements for data stored in S3 buckets. include enabling server-side encryption (SSE) with AWS-managed keys (SSE-S3) or customer-provided keys (SSE-C), or AWS Lambda encryption.
   - Logging and Monitoring: Configure S3 bucket logging to track access requests and activities performed on the buckets. Enable AWS CloudTrail integration to capture API calls related to S3 bucket management and data access.
-2. Build a sandbox environment:
+### Step 2 - Build a Sandbox Environment
 - Set up a test environment that mirrors the production AWS environment, create the S3 buckets in the test environment. creating buckets with similar names, settings, and permissions to replicate the data storage and access patterns observed in real life settings.
 - Set up IAM roles and policies in the test environment to mirror the permissions and access controls defined in the real life industry. Users and services in the test environment have similar levels of access to resources as in production.
 - Network configuration settings, including VPC (Virtual Private Cloud) configurations, subnets, security groups, and routing tables, to match those in the production environment to make sure that the test environment operates within a similar network and security boundaries as real life
 - Use AWS Config, AWS CloudTrail, and AWS Security Hub to monitor and assess compliance with the baseline configurations.
-3. Test the baseline:
+### Step 3 - Test the Baseline
 - We could use automated tools, manual testing, and simulation techniques to test how well the baseline configurations work against common attacks.
 - Thinking develop scripts ???
 - Manual penetration testing to validate the security controls implemented by the baseline configurations and identify any weaknesses or vulnerabilities.
-4. Review and Display Results:
+### Step 4 - Review and Display Results:
 - Analyze the results of any test we will simultate to identify vulnerabilities.
 - How can the baseline be improved?
 
-Currently Available Tools: 
+## Currently Available Tools: 
 - AWS Config helps ensure that S3 buckets adhere to the defined baseline configurations by continuously evaluating their settings and notifying administrators of any deviations.
 - CloudTrail provides visibility into changes made to S3 buckets and helps organizations track user activity and API usage for security monitoring and auditing purposes.
 - Security Hub aggregates and analyzes security findings from multiple AWS services, including AWS Config and CloudTrail, to identify security risks and compliance issues related to S3 buckets and other AWS resources.
