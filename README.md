@@ -41,23 +41,30 @@ A cross-section of research papers related to S3 bucket security are listed in t
 de Oliveira, A. Securing Weak Points in Serverless Architectures. |   |  
 
 ## Technical Plan
-This project aims to bolster S3 bucket security. In order to do that, the project has been split into four key sections, each complete with subtasks needed to accomplish the overall goal, all listed below. 
+This project aims to bolster S3 bucket security. In order to do that, the project has been split into five key sections, each complete with subtasks needed to accomplish the overall goal, all listed below. 
 ### Step 1 - Develop the Baseline
-- Define a set of baseline configurations and security controls for securing S3 buckets based on the collected data and analysis.
-- Tailor the baselines to meet the specific security requirements and compliance needs of different industries or verticals (ex: banking, retail, media…).
-  - Example of security requirement; Health system HIPAA
-- Define Baseline Configuration: Based on the identified security requirements and AWS best practices, we should define a baseline configuration for S3 buckets. settings related to access control, encryption, logging, and versioning.
-  - Access Control: Determine the access control policies buckets, including permissions for IAM users, roles, and groups. Implement the principle of least privilege to ensure that only authorized users have access to the buckets and their contents.
-  - Encryption: Decide on encryption requirements for data stored in S3 buckets. include enabling server-side encryption (SSE) with AWS-managed keys (SSE-S3) or customer-provided keys (SSE-C), or AWS Lambda encryption.
-  - Logging and Monitoring: Configure S3 bucket logging to track access requests and activities performed on the buckets. Enable AWS CloudTrail integration to capture API calls related to S3 bucket management and data access.
+Starting with the AWS S3 best practice documentation, a set of baseline configurations and security controls will be developed for securing S3 buckets. These baselines will include specific recommendations that correspond to settings in the AWS console. There will be multiple baselines developed, each of which will be tailored to a different set of security requirements. For example, one baseline may be appropriate for a healthcare organization storing information that must be compliant with HIPAA. Another baseline might be applicable to an ecommerce company looking to store public images and customer reviews. 
+
+Some of the settings that should be addressed by the baselines include: 
+- Access Control: Including prescribing access control policies for buckets, permissions for IAM users, roles, and groups. Implement the principle of least privilege to ensure that only authorized users have access to the buckets and their contents.
+- Encryption: Deciding on encryption requirements for data stored in S3 buckets. Including whether or not to enable server-side encryption (SSE) with AWS-managed keys (SSE-S3) or customer-provided keys (SSE-C).
+- Logging and Monitoring: Configure S3 bucket logging to track access requests and activities performed on the buckets. Enable AWS CloudTrail integration to capture API calls related to S3 bucket management and data access.
+
 ### Step 2 - Build a Sandbox Environment
-- Set up a test environment that mirrors the production AWS environment, create the S3 buckets in the test environment. creating buckets with similar names, settings, and permissions to replicate the data storage and access patterns observed in real life settings.
-- Set up IAM roles and policies in the test environment to mirror the permissions and access controls defined in the real life industry. Users and services in the test environment have similar levels of access to resources as in production.
-- Network configuration settings, including VPC (Virtual Private Cloud) configurations, subnets, security groups, and routing tables, to match those in the production environment to make sure that the test environment operates within a similar network and security boundaries as real life
-- Use AWS Config, AWS CloudTrail, and AWS Security Hub to monitor and assess compliance with the baseline configurations.
+A sandbox environment will be built out in AWS. In reality, multiple sandbox environments may be needed, or may be more convenient. These sandboxes will be able to mirror the settings prescribed in the baselines defined in Step 1. The sandboxes will be built in AWS using real-world practices so that we are able to mimick closely the real-world environment that organizations would be running. 
+
+The sandbox would be used to test implementing the baselines to start. Some questions that should be addreessed by this initial round of testing might include: 
+- Can the baseline be applied as prescribed?
+- If so, how long does the configuration take to implement?
+- How difficult is the implementation?
+- How might additional settings in an organization's AWS environment outside of the S3 functionality impact the baselines, such as VPCs, security groups, routing tables, etc.?
+
+Additional network configuration settings, including VPC (Virtual Private Cloud) configurations, subnets, security groups, and routing tables, will be configured to match those found in a production environment to make sure that the test environment operates within a similar network and security boundaries as real life. 
+
+Prescribed security tools such as AWS Config, AWS CloudTrail, and AWS Security Hub will be set up according to the baseline configurations.
+
 ### Step 3 - Test the Baseline
-- We could use automated tools, manual testing, and simulation techniques to test how well the baseline configurations work against common attacks.
-- Thinking develop scripts ???
+After setting up the sandbox, penetration testing will be performed against the various sandbox setups, secured using the baseline configurations. Penetration testing should utilize available tooling such as Kali Linux and various other penetration testing tools and replicate the types of attacks that an attacker would be expected to carry out against an S3 bucket found in the real world. A mixture of automated tools and manual testing will be implemented to ensure test coverage. Custom scripts may be developed to support the testing as needed. 
 - Manual penetration testing to validate the security controls implemented by the baseline configurations and identify any weaknesses or vulnerabilities.
 ### Step 4 - Review and Display Results:
 - Analyze the results of any test we will simultate to identify vulnerabilities.
