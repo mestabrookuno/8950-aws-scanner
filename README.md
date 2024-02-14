@@ -12,7 +12,13 @@ The S3 Baseline Project aims to fix that problem of misconfigured S3 buckets lea
 Organizations of all sizes would be able to benefit from having detailed baselines like those proposed above, in order to assist them in securing S3 buckets. Smaller organizations with less in-house cloud expertise would likely benefit most from these baselines, though. Having a proven baseline to guide the setup and configuration of S3 buckets would make it easier for organizations of any size to safely utilize cloud resources like S3 buckets. 
 
 # Project Risk Matrix
-<to be completed by Mark>
+|Risk name (value)  | Impact     | Likelihood | Description |
+|-------------------|------------|------------|-------------|
+|Legality of Scanning S3 Buckets (63) | 9 | 7 | Scanning S3 buckets as a part of AWS infrstructure may create an issue in legality. We may only be able to go so far with testing on our sandbox buckets without losing the ability to do so.  |
+|Creating Realisitc AWS Infrstructure (35) | 7 | 5 | Creating a realistic infrastructure is needed in order to properly test our guidlines. If we are unable to create this it may lead to gaps in guidlines and recommendations.  |
+|Scripting Limitaitons in AWS (30) | 6 | 5 | When automating the implemntation we may run into issues with how much can be done. It may not be possible to fully automate through AWS CLI.  |
+|Limitations of Pen Testing (24) | 6 | 4 | We may not have the necessary tools or knowledge to fully pen test the sandbox buckets creating gaps in guidlines.  |
+|Data Acquisition (18) | 9 | 2 |  When creating S3 buckets we must fill them with data in order to test. We may be unable to find usefull data that has a mix of both sensetive test data and benign data. |
 
 # Resources Needed
 |Resource  | Dr. Hale needed? | Investigating Team member | Description |
