@@ -12,7 +12,13 @@ The S3 Baseline Project aims to fix that problem of misconfigured S3 buckets lea
 Organizations of all sizes would be able to benefit from having detailed baselines like those proposed above, in order to assist them in securing S3 buckets. Smaller organizations with less in-house cloud expertise would likely benefit most from these baselines, though. Having a proven baseline to guide the setup and configuration of S3 buckets would make it easier for organizations of any size to safely utilize cloud resources like S3 buckets. 
 
 # Project Risk Matrix
-<to be completed by Mark>
+|Risk name (value)  | Impact     | Likelihood | Description |
+|-------------------|------------|------------|-------------|
+|Legality of Scanning S3 Buckets (63) | 9 | 7 | Scanning S3 buckets as a part of AWS infrstructure may create an issue in legality. We may only be able to go so far with testing on our sandbox buckets without losing the ability to do so.  |
+|Creating Realisitc AWS Infrstructure (35) | 7 | 5 | Creating a realistic infrastructure is needed in order to properly test our guidlines. If we are unable to create this it may lead to gaps in guidlines and recommendations.  |
+|Scripting Limitaitons in AWS (30) | 6 | 5 | When automating the implemntation we may run into issues with how much can be done. It may not be possible to fully automate through AWS CLI.  |
+|Limitations of Pen Testing (24) | 6 | 4 | We may not have the necessary tools or knowledge to fully pen test the sandbox buckets creating gaps in guidlines.  |
+|Data Acquisition (18) | 9 | 2 |  When creating S3 buckets we must fill them with data in order to test. We may be unable to find usefull data that has a mix of both sensetive test data and benign data. |
 
 # Resources Needed
 |Resource  | Dr. Hale needed? | Investigating Team member | Description |
@@ -40,32 +46,45 @@ A cross-section of research papers related to S3 bucket security are listed in t
 | AWS security cookbook : practical solutions for managing security policies, monitoring, auditing, and compliance with AWS | 2020 | **Introduction**: The book "AWS Security Cookbook" offers practical solutions for securing Amazon Web Services (AWS) infrastructure by implementing security policies, monitoring tools, and compliance measures. It emphasizes the importance of following cloud security best practices and explores various AWS services and features designed to enhance security. **Book Description**: The book is aimed at security consultants and professionals seeking to secure AWS infrastructure by implementing policies and following best practices. It covers a wide range of topics, including IAM and S3 policies, data security, application security, monitoring, and compliance. The discussion extends to AWS security services like Config, GuardDuty, Macie, and Inspector, along with cloud security best practices. **Audience**: The book targets IT security professionals, cloud security architects, and cloud application developers working on security-related roles who are interested in utilizing AWS infrastructure for secure application deployment. **Key Features**: **Implementing Security Solutions**: The book provides useful recipes for implementing robust cloud security solutions on AWS, with topics like permission policies, key management, and network security. **Monitoring and Auditing**: How to monitor AWS infrastructure and workloads effectively using tools like CloudWatch, CloudTrail, Config, GuardDuty, and Macie. **Preparation for Certification**: It helps prepare for the AWS Certified Security-Specialty exam by exploring different security models, compliance offerings, and best practices.
 Securing Weak Points in Serverless Architectures. |  2020 |  **Introduction**: Serverless technology has transformed enterprise computing. It enables dynamic, scalable operations while freeing organizations from the burden of server management. However, despite the security advantages that serverless models offer, security is still a shared responsibility between CSPs and users. **Serverless Architectures**: In serverless computing, CSPs like AWS handle infrastructure management, enabling users to focus solely on deploying code. This abstraction layer ensures secure infrastructure, but users must still secure their data and applications. **Connected Services in a Serverless Architecture**: Critical AWS services, including Lambda, API Gateway, and IAM, are integral to serverless architectures. However, users must carefully manage permissions and configurations to maintain security and prevent unauthorized access. **Misconfigurations and Unsecure Practices**: Common misconfigurations in services like S3 and Lambda, along with unsecure coding practices, can lead to data exposure and vulnerabilities. Implementing least-privilege principles and adhering to best practices are essential for mitigating these risks. **Possible Compromise and Attack Scenarios**: Malicious actors exploit common errors and misconfigurations to execute attacks such as credential theft, privilege escalation, and financial exploitation. Vigilance and proactive security measures are necessary to prevent such incidents. **Security Measures and Recommendations**: Developers should prioritize code review, and employ application security solutions to detect and prevent attacks. Regular rotation of IAM access keys and diligent configuration management are crucial for maintaining security. **Conclusion**: While CSPs handle infrastructure security, users must actively secure their code, data, and access controls. Adherence to security best practices and vigilance are paramount for mitigating risks and ensuring the security of serverless deployments.
 
-## Technical Plan
-This project aims to bolster S3 bucket security. In order to do that, the project has been split into four key sections, each complete with subtasks needed to accomplish the overall goal, all listed below. 
-### Step 1 - Develop the Baseline
-- Define a set of baseline configurations and security controls for securing S3 buckets based on the collected data and analysis.
-- Tailor the baselines to meet the specific security requirements and compliance needs of different industries or verticals (ex: banking, retail, media…).
-  - Example of security requirement; Health system HIPAA
-- Define Baseline Configuration: Based on the identified security requirements and AWS best practices, we should define a baseline configuration for S3 buckets. settings related to access control, encryption, logging, and versioning.
-  - Access Control: Determine the access control policies buckets, including permissions for IAM users, roles, and groups. Implement the principle of least privilege to ensure that only authorized users have access to the buckets and their contents.
-  - Encryption: Decide on encryption requirements for data stored in S3 buckets. include enabling server-side encryption (SSE) with AWS-managed keys (SSE-S3) or customer-provided keys (SSE-C), or AWS Lambda encryption.
-  - Logging and Monitoring: Configure S3 bucket logging to track access requests and activities performed on the buckets. Enable AWS CloudTrail integration to capture API calls related to S3 bucket management and data access.
-### Step 2 - Build a Sandbox Environment
-- Set up a test environment that mirrors the production AWS environment, create the S3 buckets in the test environment. creating buckets with similar names, settings, and permissions to replicate the data storage and access patterns observed in real life settings.
-- Set up IAM roles and policies in the test environment to mirror the permissions and access controls defined in the real life industry. Users and services in the test environment have similar levels of access to resources as in production.
-- Network configuration settings, including VPC (Virtual Private Cloud) configurations, subnets, security groups, and routing tables, to match those in the production environment to make sure that the test environment operates within a similar network and security boundaries as real life
-- Use AWS Config, AWS CloudTrail, and AWS Security Hub to monitor and assess compliance with the baseline configurations.
-### Step 3 - Test the Baseline
-- We could use automated tools, manual testing, and simulation techniques to test how well the baseline configurations work against common attacks.
-- Thinking develop scripts ???
-- Manual penetration testing to validate the security controls implemented by the baseline configurations and identify any weaknesses or vulnerabilities.
-### Step 4 - Review and Display Results:
-- Analyze the results of any test we will simultate to identify vulnerabilities.
-- How can the baseline be improved?
-
-## Currently Available Tools: 
+### Currently Available Tools: 
+Some tools were found to be potentially helpful as well. Those tools will be considered when crafting the baseline configurations. A large amount of documentation is available from AWS for the below tools. 
 - AWS Config helps ensure that S3 buckets adhere to the defined baseline configurations by continuously evaluating their settings and notifying administrators of any deviations.
 - CloudTrail provides visibility into changes made to S3 buckets and helps organizations track user activity and API usage for security monitoring and auditing purposes.
 - Security Hub aggregates and analyzes security findings from multiple AWS services, including AWS Config and CloudTrail, to identify security risks and compliance issues related to S3 buckets and other AWS resources.
 
+## Technical Plan
+This project aims to bolster S3 bucket security. In order to do that, the project has been split into five key sections, each complete with subtasks needed to accomplish the overall goal, all listed below. 
+### Step 1 - Develop the Baseline
+Starting with the AWS S3 best practice documentation, a set of baseline configurations and security controls will be developed for securing S3 buckets. These baselines will include specific recommendations that correspond to settings in the AWS console. There will be multiple baselines developed, each of which will be tailored to a different set of security requirements. For example, one baseline may be appropriate for a healthcare organization storing information that must be compliant with HIPAA. Another baseline might be applicable to an ecommerce company looking to store public images and customer reviews. 
 
+Some of the settings that should be addressed by the baselines include: 
+- Access Control: Including prescribing access control policies for buckets, permissions for IAM users, roles, and groups. Implement the principle of least privilege to ensure that only authorized users have access to the buckets and their contents.
+- Encryption: Deciding on encryption requirements for data stored in S3 buckets. Including whether or not to enable server-side encryption (SSE) with AWS-managed keys (SSE-S3) or customer-provided keys (SSE-C).
+- Logging and Monitoring: Configure S3 bucket logging to track access requests and activities performed on the buckets. Enable AWS CloudTrail integration to capture API calls related to S3 bucket management and data access.
+
+### Step 2 - Build a Sandbox Environment
+A sandbox environment will be built out in AWS. In reality, multiple sandbox environments may be needed, or may be more convenient. These sandboxes will be able to mirror the settings prescribed in the baselines defined in Step 1. The sandboxes will be built in AWS using real-world practices so that we are able to mimick closely the real-world environment that organizations would be running. 
+
+The sandbox would be used to test implementing the baselines to start. Some questions that should be addreessed by this initial round of testing might include: 
+- Can the baseline be applied as prescribed?
+- If so, how long does the configuration take to implement?
+- How difficult is the implementation?
+- How might additional settings in an organization's AWS environment outside of the S3 functionality impact the baselines, such as VPCs, security groups, routing tables, etc.?
+
+Additional network configuration settings, including VPC (Virtual Private Cloud) configurations, subnets, security groups, and routing tables, will be configured to match those found in a production environment to make sure that the test environment operates within a similar network and security boundaries as real life. 
+
+Prescribed security tools such as AWS Config, AWS CloudTrail, and AWS Security Hub will be set up according to the baseline configurations.
+
+### Step 3 - Test the Baseline
+After setting up the sandbox, penetration testing will be performed against the various sandbox setups, secured using the baseline configurations. Penetration testing should utilize available tooling such as Kali Linux and various other penetration testing tools and replicate the types of attacks that an attacker would be expected to carry out against an S3 bucket found in the real world. A mixture of automated tools and manual testing will be implemented to ensure test coverage. Custom scripts may be developed to support the testing as needed. 
+- Manual penetration testing to validate the security controls implemented by the baseline configurations and identify any weaknesses or vulnerabilities.
+
+### Step 4 - Review and Display Results
+Penetration test results from wide open buckets or buckets configured to some basic level of hardening will be used as a "control" to judge the effectiveness of the security baselines. For example, penetration testing of a wide open bucket should show a lot of vulnerabilities easily accessible by a hacker. In order to prove that the provided S3 baseline configurations actually have a marked impact on the security of S3 buckets, test results after should show a reduction in the number of vulnerabilities. 
+
+Results from initial baselines will be noted and shared. If there are glaring vulnerabilities that are not acceptable according to the baseline's level of intended security, modifications may need to be made to the baseline and the tests re-run. 
+
+### Step 5 - Automate Baseline Implementation
+Time is a luxury for most IT departments, and especially so for the smaller organizations that can stand to benefit from S3 baselines. It would be beneficial to also provide a means of automating the implementation of the developed baselines. This would mean that a system administrator or cloud administrator could implement the baseline recommendations by running a single script rather than hunting down potentially dozens of settings in the AWS console. 
+
+The AWS CLI can be used to run scripts, and AWS Cloudformation can also be used to automate the construction of security policies and settings. Both tools will be incorporated into this step and the most thorough, most convenient methods will be selected to put forth as an option for system administrators to use to implement the baselines. 
