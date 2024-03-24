@@ -88,3 +88,10 @@ Results from initial baselines will be noted and shared. If there are glaring vu
 Time is a luxury for most IT departments, and especially so for the smaller organizations that can stand to benefit from S3 baselines. It would be beneficial to also provide a means of automating the implementation of the developed baselines. This would mean that a system administrator or cloud administrator could implement the baseline recommendations by running a single script rather than hunting down potentially dozens of settings in the AWS console. 
 
 The AWS CLI can be used to run scripts, and AWS Cloudformation can also be used to automate the construction of security policies and settings. Both tools will be incorporated into this step and the most thorough, most convenient methods will be selected to put forth as an option for system administrators to use to implement the baselines. 
+
+# Setup Instructions
+## Sign up for an AWS account
+In order to do anything on AWS, you need to sign up for an AWS account. There are multiple ways to do this. If you work for or are part of an organization there may already be an organizational account that you can take advantage of. If not, you can sign up for an AWS account using your email address and a credit card (used for billing services used). 
+
+## Create Individual S3 Buckets
+The purpose of these baselines is to enhance the security of S3 buckets. And, as was stated above, some level of testing is needed to verify the baselines are in fact contributing to the security of the buckets. So, in order to test this, three (or more) buckets are needed, one corresponding to each level of baseline provided. Each bucket will have settings adjusted according to the prescribed baseline, and can then be tested against the others. 
