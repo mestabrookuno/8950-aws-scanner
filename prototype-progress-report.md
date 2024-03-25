@@ -17,6 +17,9 @@ Applicable:
 - SC System and Communications Protection
 - SI System and Information Integrity
 
+### Progress on Infrastructure
+One of the main hurdles in this project was getting access to AWS resources so the entire team had enough access in order to spin up the required resources, and carry out testing. The University has a corporate AWS account that we were able to utilize in this regard. The IT team was able to provision a separate account for us to use. 
+
 ## Outcomes
 (brief overview of outcomes - what did you achieve?)
 
