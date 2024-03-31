@@ -23,7 +23,7 @@ Within these families we were also able to determine which individual controls w
 One of the main hurdles in this project was getting access to AWS resources so the entire team had enough access in order to spin up the required resources, and carry out testing. The University has a corporate AWS account that we were able to utilize in this regard. The IT team was able to provision a separate account for us to use. We are currently spending time determining if there are any further permissions needed for us to carry out the necessary testing. For now we have gained full access to S3 and EC2 in order to spin up buckets and a Kali box. Further requests for permissions will go through Dr.Hale as necessary. We currently have three S3 buckets that we will implement the low medium and high baselines to. 
 
 ### Research Progress
-The research question we developed is as follows, "What are the most effective methods for detecting and responding to security threats (e.g., unauthorized access attempts, data breaches) targeting S3 buckets?". Using the AWS infrastructure and baselines we will create a comprehensive answer to this question. We have also begun looking at outside answers to this question in order to test them and compare our results against them. 
+The research question we developed is as follows, "How well do the baselines defend against known attack vectors targeting S3 buckets, such as unauthorized access, data exfiltration, and denial-of-service attacks?". Using the AWS infrastructure and baselines we will create a comprehensive answer to this question. We have also begun looking at outside answers to this question in order to test them and compare our results against them. 
 
 ## Outcomes
 
