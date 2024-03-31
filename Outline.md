@@ -1,12 +1,11 @@
+# Research Question
+How well do the baselines defend against known attack vectors targeting S3 buckets, such as unauthorized access, data exfiltration, and denial-of-service attacks?
 
-Research Question: 
-●	How well do the baselines defend against known attack vectors targeting S3 buckets, such as unauthorized access, data exfiltration, and denial-of-service attacks?
-
-I. Introduction
-A. Overview of Cloud Providers and S3 Buckets
-B. Importance of Securing S3 Buckets
-C. Purpose of the S3 Baseline Project
-D. Research Question
+## I. Introduction
+  A. Overview of Cloud Providers and S3 Buckets
+  B. Importance of Securing S3 Buckets
+  C. Purpose of the S3 Baseline Project
+  D. Research Question
 
 II. Literature Review
 A. Overview of Cloud Security Challenges
