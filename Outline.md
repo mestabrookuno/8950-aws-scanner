@@ -14,20 +14,20 @@ How well do the baselines defend against known attack vectors targeting S3 bucke
 
 ## III. Methodology
   A. Development of Baselines
-    1. Determining Security Requirements for Different Verticals
-    2. Identifying Key Configuration Settings (Access Control, Encryption, Logging)
+  1. Determining Security Requirements for Different Verticals
+  2. Identifying Key Configuration Settings (Access Control, Encryption, Logging)
   B. Building Sandbox Environment
-    1. Setup of Sandbox Environments in AWS
-    2. Configuration of Network Settings
-    3. Deployment of Security Tools
+  1. Setup of Sandbox Environments in AWS
+  2. Configuration of Network Settings
+  3. Deployment of Security Tools
   C. Testing the Baseline
-    1. Penetration Testing Methodology
-    2. Use of Penetration Testing Tools
-    3. Manual Testing Procedures
+  1. Penetration Testing Methodology
+  2. Use of Penetration Testing Tools
+  3. Manual Testing Procedures
   D. Review and Display of Results
-    1. Comparison with Control Scenarios
-    2. Identification of Vulnerabilities
-    3. Necessary Modifications to Baselines
+  1. Comparison with Control Scenarios
+  2. Identification of Vulnerabilities
+  3. Necessary Modifications to Baselines
 
 ## IV. Results
   A. Effectiveness of Baselines Against Attack Vectors
