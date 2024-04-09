@@ -5,4 +5,4 @@ The CA-9 control reads:
 > Authorize internal connections of [organization-defined system components or classes of components] to the system;
 
 In order to restrict connections to the S3 bucket from only internal sources, we can turn on the "Block Public Access" setting from within the S3 settings page. 
-![AWS S3 Setting for Block Public Access]()
+![AWS S3 Setting for Block Public Access](CA-9_Block Public Access.png)
