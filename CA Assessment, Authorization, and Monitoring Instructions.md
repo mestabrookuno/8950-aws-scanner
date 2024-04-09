@@ -13,3 +13,4 @@ Doing this means that any external connections to the bucket would be blocked. T
 ### Testing CA-9
 In order to test CA-9, we first need to confirm that the bucket is not accessible publicly. We can verify this by logging into the AWS S3 console and going to the properties of the bucket in question. In the "Bucket overview" section we see that there is no public URL listed. This indicates that the bucket is not accessible publicly. 
 
+![AWS S3 Setting Showing No Public URL](CA-9_NoPublicAccess.png)
