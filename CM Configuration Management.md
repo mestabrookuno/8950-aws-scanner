@@ -1,3 +1,5 @@
+Below are instructions for implementing controls in S3 found within the "CM Configuration Management" category of NIST 800-53.
+
 # CM-5 - Access Restrictions for Change
 CM-5, Access Restrictions for Change reads: 
 > Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system.
