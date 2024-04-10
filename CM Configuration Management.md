@@ -35,3 +35,6 @@ Below is an example of a policy that applies to a single AWS IAM user and allows
 	]
 }
 ```
+
+## Testing CM-5
+In order to test this control, we need to attempt to make changes to the bucket policy as one of the users (principals) listed in the principal list in the above policy, and as a user not listed in the principal list. We would expect that the user in the principal list could edit the policy, while the user not in the principal list could not edit the policy. 
