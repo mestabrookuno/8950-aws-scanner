@@ -57,5 +57,15 @@ Now, open up the bucket you intend to apply this policy to. Click on the "Permis
 
 ![AWS S3 Permissions Tab](images/CM-9_Step3.png)
 
+Find the Bucket policy section, and click the "Edit" button. 
+
+![AWS S3 Permissions Tab](images/CM-9_Step4.png)
+
+Copy and paste the policy into the Policy section of the page, and click "Save changes" at the bottom. 
+
+![AWS S3 Permissions Tab](images/CM-9_Step5.png)
+
+You have successfully denied access to the selected administrators to edit or remove the bucket policy. 
+
 ## Testing CM-5
 In order to test this control, we need to attempt to make changes to the bucket policy as one of the users (principals) listed in the principal list in the above policy, and as a user not listed in the principal list. We would expect that the user in the principal list could edit the policy, while the user not in the principal list could not edit the policy. 
