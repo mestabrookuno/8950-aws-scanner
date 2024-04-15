@@ -22,7 +22,7 @@ Below is an example of a policy that applies to a single AWS IAM user and allows
 			"Principal": {
 			    "AWS":"arn:aws:iam::975050068436:user/mattE"
 			},
-			"Effect": "Allow",
+			"Effect": "Deny",
 			"Action": [
 				"s3:DeleteBucketPolicy",
 				"s3:PutBucketPolicy",
