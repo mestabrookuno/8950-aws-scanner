@@ -9,4 +9,4 @@ When looking at an S3 bucket, the primary means of enforcing authentication is t
 
 ![AWS Services Menu - Selecting IAM](images/IA-1_IAMSelection.png)
 
-## Implementing IA-2(1) Multi-factor Authentication to Privileged Accounts
+## Implementing IA-2(1) Multi-factor Authentication to Privileged Accounts and IA-2(2) Multi-factor Authentication to Non-privileged Accounts
