@@ -2,7 +2,7 @@ Below are instructions for implementing controls in S3 found within the "AU Audi
 
 # AU-2, AU-3, AU-3(1), AU-8, AU-12, AU-12(1), AU-12(3)
 
-Server Access Logging:
+## Server Access Logging:
 
 Create a new logging bucket. 
 
@@ -18,3 +18,8 @@ If done correctly it should look like this.
 
 ![Server Logging Settings](images/AU-Server_Access_Logging.png)
 
+## Testing Server Access Logging
+
+In the chosen bucket begin making changes by making any server accesses. 
+
+Navigate to the logging bucket and confirm that logs have been created that correlate to the changes made. 
