@@ -7,11 +7,11 @@ The CA-9 control reads:
 
 In order to restrict connections to the S3 bucket from only internal sources, we can turn on the "Block Public Access" setting from within the S3 settings page. 
 
-![AWS S3 Setting for Block Public Access](CA-9_BlockPublicAccess.png)
+![AWS S3 Setting for Block Public Access](images/CA-9_BlockPublicAccess.png)
 
 Doing this means that any external connections to the bucket would be blocked. This sort of configuration is appropriate for high and potentially medium-security baseline configurations. It would not be appropriate for low-security configurations that require public access for hosting files publicly. 
 
 ## Testing CA-9
 In order to test CA-9, we first need to confirm that the bucket is not accessible publicly. We can verify this by logging into the AWS S3 console and going to the properties of the bucket in question. In the "Bucket overview" section we see that there is no public URL listed. This indicates that the bucket is not accessible publicly. 
 
-![AWS S3 Setting Showing No Public URL](CA-9_NoPublicAccess.png)
+![AWS S3 Setting Showing No Public URL](images/CA-9_NoPublicAccess.png)
