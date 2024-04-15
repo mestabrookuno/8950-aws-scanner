@@ -15,3 +15,6 @@ Then select the “[DestinationPrefix][SourceAccountId]/​[SourceRegion]/​[So
 If done correctly it should look like this. 
 
 ![Server Logging Settings](images/AU - Server Access Logging 2.png)
+
+
+![AWS S3 Setting for Block Public Access](images/CA-9_BlockPublicAccess.png)
