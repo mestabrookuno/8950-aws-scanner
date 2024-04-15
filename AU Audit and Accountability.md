@@ -23,3 +23,27 @@ If done correctly it should look like this.
 In the chosen bucket begin making changes by making any server accesses. 
 
 Navigate to the logging bucket and confirm that logs have been created that correlate to the changes made. 
+
+## Cloud Trail
+Navigate to the properties tab in your desired bucket.
+
+Open the CloudTrail tab and select the trails tab
+
+Create a new trail and choose a name
+
+Either create a new logging bucket or use an existing S3 bucket designated for logging.
+
+Create a new name for your new KMS key or choose an existing KMS key from the drop down
+
+![Server Logging Settings](images/AU-CloudTrail_Settings_Page1.png)
+
+Navigate to the next page
+On the next page select Management Events, Data Events, and Insight Events
+
+![Server Logging Settings](images/AU-CloudTrail_Settings_Page2(1).png)
+
+Under Data Events choose S3 from the drop down and log all events from the next drop down
+
+Under Insight Events select API Call Rate
+
+![Server Logging Settings](images/AU-CloudTrail_Settings_Page2(2).png)
