@@ -15,12 +15,16 @@ In order to more easily write up a bucket policy to block access to the bucket p
 
 Once on the policy generator page, we select "S3" as the policy type. 
 
+![AWS S3 Policy Generator Step 1](images/CM-9_Step1.png)
+
 Next, select "Deny" as the intended effect of this policy statement. You will need to fill in the Principal (the administrator account ARN(s) that you would like to deny access to), and select the below three options from the "Actions" dropdown: 
 - DeleteBucketPolicy
 - GetBucketPolicy
 - PutBucketPolicy
 
 Click "Add Statement" at the bottom in order to add that policy statement. 
+
+![AWS S3 Policy Generator Step 2](images/CM-9_Step2.png)
 
 In this case, we only need to add one statement. So, we are able to click "Generate Policy" at the bottom. This will generate the policy for us, and you can copy that policy right out of the generator and keep it handy for the next steps. 
 
@@ -50,6 +54,8 @@ Below is an example of a policy that applies to a single AWS IAM user and allows
 ```
 
 Now, open up the bucket you intend to apply this policy to. Click on the "Permissions" tab to bring up the permissions page, where the bucket policy is located. 
+
+![AWS S3 Permissions Tab](images/CM-9_Step3.png)
 
 ## Testing CM-5
 In order to test this control, we need to attempt to make changes to the bucket policy as one of the users (principals) listed in the principal list in the above policy, and as a user not listed in the principal list. We would expect that the user in the principal list could edit the policy, while the user not in the principal list could not edit the policy. 
