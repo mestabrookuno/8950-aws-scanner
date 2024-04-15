@@ -4,17 +4,7 @@ Below are instructions for implementing controls in S3 found within the "AU Audi
 
 ## Server Access Logging:
 
-Create a new logging bucket. 
-
-In your bucket navigate to the properties tab
-
-Find “Server Access Logging” and choose edit, then enable. 
-
-Once in select your new logs bucket from the “Browse S3” option
-
-Then select the “[DestinationPrefix][SourceAccountId]/​[SourceRegion]/​[SourceBucket]/​[YYYY]/​[MM]/​[DD]/​[YYYY]-[MM]-[DD]-[hh]-[mm]-[ss]-[UniqueString]” option and ensure logs are created based on event time. 
-
-If done correctly it should look like this. 
+In order to hold the logs we will need to create a new logging bucket. Within this bucket we can navigate to the properties tab. On the Server Access Logging section we can choose edit then enable. Once in select your new logs bucket from the “Browse S3” option. Then select the “[DestinationPrefix][SourceAccountId]/​[SourceRegion]/​[SourceBucket]/​[YYYY]/​[MM]/​[DD]/​[YYYY]-[MM]-[DD]-[hh]-[mm]-[ss]-[UniqueString]” option and ensure logs are created based on event time. If done correctly it should look like this. 
 
 ![Server Logging Settings](images/AU-Server_Access_Logging.png)
 
