@@ -69,3 +69,9 @@ You have successfully denied access to the selected administrators to edit or re
 
 ## Testing CM-5
 In order to test this control, we need to attempt to make changes to the bucket policy as one of the users (principals) listed in the principal list in the above policy, and as a user not listed in the principal list. We would expect that the user in the principal list could edit the policy, while the user not in the principal list could not edit the policy. 
+
+If, as a principal of an administrator who was denied access to edit the bucket policy (as seen above) we try and access the bucket policy page, we should see the below error message if the access is correctly blocked. 
+
+![AWS S3 Permissions Tab Error Message Access Denied](images/CM-9_AccessDenied.png)
+
+If we are able to see the bucket policy (and no error message is shown like the one above), the control is not in place. 
