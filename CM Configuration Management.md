@@ -11,6 +11,19 @@ Bucket policies are a feature of S3 buckets in AWS that allow you to grant or re
 
 In order to restrict access to administrative-level actions on an S3 bucket, you would want to restrict the ability to modify or remove bucket policies and ACLs. There are AWS "Actions" that correspond to those three administrative actions. We can write a bucket policy which has an "Allow" effect for specified principals (AWS users). 
 
+In order to more easily write up a bucket policy to block access to the bucket policy for certain administrators, we can use the AWS policy generator tool. The tool can be found here: https://awspolicygen.s3.amazonaws.com/policygen.html
+
+Once on the policy generator page, we select "S3" as the policy type. 
+
+Next, select "Deny" as the intended effect of this policy statement. You will need to fill in the Principal (the administrator account ARN(s) that you would like to deny access to), and select the below three options from the "Actions" dropdown: 
+- DeleteBucketPolicy
+- GetBucketPolicy
+- PutBucketPolicy
+
+Click "Add Statement" at the bottom in order to add that policy statement. 
+
+In this case, we only need to add one statement. So, we are able to click "Generate Policy" at the bottom. This will generate the policy for us, and you can copy that policy right out of the generator and keep it handy for the next steps. 
+
 Below is an example of a policy that applies to a single AWS IAM user and allows that user to modify the bucket policies (and therefore the settings of the bucket itself). 
 
 ```
@@ -26,7 +39,7 @@ Below is an example of a policy that applies to a single AWS IAM user and allows
 			"Action": [
 				"s3:DeleteBucketPolicy",
 				"s3:PutBucketPolicy",
-				"s3:PutBucketAcl"
+				"s3:GetBucketPolicy"
 			],
 			"Resource": [
 				"arn:aws:s3:::uno-8950-high-sec-baseline"
@@ -35,6 +48,8 @@ Below is an example of a policy that applies to a single AWS IAM user and allows
 	]
 }
 ```
+
+Now, open up the bucket you intend to apply this policy to. Click on the "Permissions" tab to bring up the permissions page, where the bucket policy is located. 
 
 ## Testing CM-5
 In order to test this control, we need to attempt to make changes to the bucket policy as one of the users (principals) listed in the principal list in the above policy, and as a user not listed in the principal list. We would expect that the user in the principal list could edit the policy, while the user not in the principal list could not edit the policy. 
