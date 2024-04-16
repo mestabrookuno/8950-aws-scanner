@@ -11,3 +11,16 @@ Retail organizations may need moderately stringent configurations to minimize se
 Certain media outlets or other oganizations may need very little configuration due to the majority of data being published publicly anyway
 Test each level of baseline provided above against reasonable attack vectors against S3 buckets to provide some assurance that the framework provides value
 Organizations of all sizes would be able to benefit from having detailed baselines like those proposed above, in order to assist them in securing S3 buckets. Smaller organizations with less in-house cloud expertise would likely benefit most from these baselines, though. Having a proven baseline to guide the setup and configuration of S3 buckets would make it easier for organizations of any size to safely utilize cloud resources like S3 buckets.
+
+## Framework Alignment and Control Family Applicability
+The NIST 800-53 framework provides a list of 20 control families. The contributors to this project selected 10 control families that are applicable to S3 buckets. The list of applicable control families is below. 
+- AC Access Control
+- AT Awareness and Training
+- AU Audit and Accountability
+- CA Assessment, Authorization, and Monitoring
+- CM Configuration Management
+- CP Contingency Planning
+- IA Identification and Authentication
+- MP Media Protection
+- SC System and Communications Protection
+- SI System and Information Integrity
