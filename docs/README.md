@@ -155,8 +155,8 @@ Once that has been completed, MFA is enabled for that user.
 ## Testing Multi-factor Authentication
 
 
-## MP Media Protection
+# MP Media Protection
 
-## SC System and Communications Protection
+# SC System and Communications Protection
 
-## SI System and Information Integrity
+# SI System and Information Integrity
