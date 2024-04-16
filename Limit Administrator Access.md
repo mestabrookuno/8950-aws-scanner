@@ -1,12 +1,12 @@
-Below are instructions for implementing controls in S3 found within the "CM Configuration Management" category of NIST 800-53.
+Below are instructions for implementing controls in S3 to limit admin permissions.
 
-# CM-5 - Access Restrictions for Change
+# Restricting Administrator Permissions in S3
 CM-5, Access Restrictions for Change reads: 
 > Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system.
 
 This control deals with the limiting of administrators and privileged users who have the ability to make changes to physical or logical access. In this case, only logical access is at play since the resources are in the cloud.
 
-## Implementing CM-5
+## Setting up a Bucket Policy to Limit Administrator Permissions
 Bucket policies are a feature of S3 buckets in AWS that allow you to grant or restrict access to S3 buckets, and they can even apply down to the object level within buckets. 
 
 In order to restrict access to administrative-level actions on an S3 bucket, you would want to restrict the ability to modify or remove bucket policies and ACLs. There are AWS "Actions" that correspond to those three administrative actions. We can write a bucket policy which has an "Allow" effect for specified principals (AWS users). 
@@ -67,7 +67,7 @@ Copy and paste the policy into the Policy section of the page, and click "Save c
 
 You have successfully denied access to the selected administrators to edit or remove the bucket policy. 
 
-## Testing CM-5
+## Testing Administrator Permissions Restrictions
 In order to test this control, we need to attempt to make changes to the bucket policy as one of the users (principals) listed in the principal list in the above policy, and as a user not listed in the principal list. We would expect that the user in the principal list could edit the policy, while the user not in the principal list could not edit the policy. 
 
 If, as a principal of an administrator who was denied access to edit the bucket policy (as seen above) we try and access the bucket policy page, we should see the below error message if the access is correctly blocked. 
