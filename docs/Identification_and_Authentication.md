@@ -12,7 +12,7 @@ When looking at an S3 bucket, the primary means of enforcing authentication is t
 NIST 800-53 IA-2(1) reads: 
 > Implement multi-factor authentication for access to privileged accounts.
 
-And IS-2(2) reads: 
+And IA-2(2) reads: 
 > Implement multi-factor authentication for access to privileged accounts.
 
 To enable multi-factor authentication on an account in AWS, you first need to navigate to the IAM menu. Once you're there, click on "Users" on the left side in the menu. 
