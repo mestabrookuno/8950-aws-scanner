@@ -55,6 +55,51 @@ Once on the policy generator page, we select "S3" as the policy type.
 
 ![AWS Policy Generator](/assets/CM-5_Step1.png)
 
+Next, select "Deny" as the intended effect of this policy statement. You will need to fill in the Principal (the administrator account ARN(s) that you would like to deny access to), and select the below three options from the "Actions" dropdown:
+
+- DeleteBucketPolicy
+- GetBucketPolicy
+- PutBucketPolicy
+
+Click "Add Statement" at the bottom in order to add that policy statement.
+
+![AWS Policy Generator](/assets/CM-5_Step2.png)
+
+In this case, we only need to add one statement. So, we are able to click "Generate Policy" at the bottom. This will generate the policy for us, and you can copy that policy right out of the generator and keep it handy for the next steps.
+
+Below is an example of a policy that applies to a single AWS IAM user and allows that user to modify the bucket policies (and therefore the settings of the bucket itself).
+
+```
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Statement1",
+			"Principal": {
+			    "AWS":"arn:aws:iam::975050068436:user/mattE"
+			},
+			"Effect": "Deny",
+			"Action": [
+				"s3:DeleteBucketPolicy",
+				"s3:PutBucketPolicy",
+				"s3:GetBucketPolicy"
+			],
+			"Resource": [
+				"arn:aws:s3:::uno-8950-high-sec-baseline"
+			]
+		}
+	]
+}
+```
+
+Now, open up the bucket you intend to apply this policy to. Click on the "Permissions" tab to bring up the permissions page, where the bucket policy is located. 
+
+![AWS S3 Buckets Screenshot](/assets/CM-5_Step3.png)
+
+Find the Bucket policy section, and click the "Edit" button. 
+
+![AWS S3 Bucket Policy Section](/assets/CM-5_Step4.png)
+
 # CP Contingency Planning
 
 # IA Identification and Authentication
