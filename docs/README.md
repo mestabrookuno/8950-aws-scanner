@@ -4,8 +4,8 @@ Cloud providers like Azure, Google, and AWS have changed the way organizations b
 
 The S3 Baseline Project aims to fix that problem of misconfigured S3 buckets leaking sensitive data by providing actionable baselines which security professionals and cloud administrators can use to secure their S3 buckets. The goals of this project are:
 
-Provide actionable baseline for administrators to aid in securing S3 buckets
-Meet the needs of various verticals by providing tailored baselines for different needs
+- Provide actionable baseline for administrators to aid in securing S3 buckets
+-   Meet the needs of various verticals by providing tailored baselines for different needs
 Banks may need more stringent configurations to ensure NO sensitive data is leaked
 Retail organizations may need moderately stringent configurations to minimize sensitive data leakage but still allow sharing of information publicly as needed
 Certain media outlets or other oganizations may need very little configuration due to the majority of data being published publicly anyway
