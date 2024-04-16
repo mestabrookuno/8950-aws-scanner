@@ -17,7 +17,7 @@ And IA-2(2) reads:
 
 To enable multi-factor authentication on an account in AWS, you first need to navigate to the IAM menu. Once you're there, click on "Users" on the left side in the menu. 
 
-![AWS Services Menu - Users in IAM](images/IA-2_Step1.png)
+[![AWS Services Menu - Users in IAM](https://github.com/mestabrookuno/8950-aws-scanner/blob/32eaaad5f9fc6849583c24fcfb0ca97e562ab08a/images/IA-2_Step1.png)
 
 Next, click on the name of the user you wish to implement MFA for. Click on the "Security credentials" tab. 
 
