@@ -173,6 +173,7 @@ Once that has been completed, MFA is enabled for that user.
 
 
 # MP Media Protection
+The MP family of controls deals with protecting information stored on various forms of media, such as digital, physical, or portable media. Because S3 buckets are a cloud-based storage solution provided by Amazon Web Services (AWS), and they operate within a different context compared to traditional physical or digital media, this control family is not applicable.
 
 # SC System and Communications Protection
 
