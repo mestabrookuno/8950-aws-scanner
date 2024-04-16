@@ -36,10 +36,10 @@ Not every individual control within each of the above control families is applic
 The CA family of controls deals with assessing the environment and access, authorizing access, and monitoring. The applicable control for S3 buckets is below: 
 - CA-9
 
+## Restricting Public Access to S3 Buckets
 NIST 800-53 control CA-9 reads: 
 > Authorize internal connections of [organization-defined system components or classes of components] to the system;
 
-## Restricting Public Access to S3 Buckets
 In order to restrict connections to the S3 bucket from only internal sources, we can turn on the "Block Public Access" setting from within the S3 settings page. 
 
 ![AWS Block Public Access Setting](/assets/CA-9_BlockPublicAccess.png)
