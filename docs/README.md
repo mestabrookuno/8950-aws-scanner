@@ -1,4 +1,4 @@
-## Project Purpose
+# Project Purpose
 Cloud providers like Azure, Google, and AWS have changed the way organizations build out their infrastructure. By nature, the cloud tends to be more "open" due to the fact that it is operating on shared hardware owned by someone else (the cloud provider). This can present risks, though. One of the risks that has been widely publicized is that of overly permissive S3 buckets in AWS. There are plenty of news stories about data being leaked via an S3 bucket that was publicly shared unintentionally. These misconfigurations can lead to lawsuits, bad press, and other negative outcomes for businesses. There is a need for more detailed baselines for S3 buckets in order to minimize sensitive data leakage.
 
 The S3 Baseline Project aims to fix that problem of misconfigured S3 buckets leaking sensitive data by providing actionable baselines which security professionals and cloud administrators can use to secure their S3 buckets. The goals of this project are: 
@@ -11,7 +11,7 @@ The S3 Baseline Project aims to fix that problem of misconfigured S3 buckets lea
 
 Organizations of all sizes would be able to benefit from having detailed baselines like those proposed above, in order to assist them in securing S3 buckets. Smaller organizations with less in-house cloud expertise would likely benefit most from these baselines, though. Having a proven baseline to guide the setup and configuration of S3 buckets would make it easier for organizations of any size to safely utilize cloud resources like S3 buckets.
 
-## Framework Alignment and Control Family Applicability
+# Framework Alignment and Control Family Applicability
 The NIST 800-53 framework provides a list of 20 control families. The contributors to this project selected 10 control families that are applicable to S3 buckets. The list of applicable control families is below. 
 - AC Access Control
 - AT Awareness and Training
@@ -26,20 +26,44 @@ The NIST 800-53 framework provides a list of 20 control families. The contributo
 
 Not every individual control within each of the above control families is applicable. In fact, most are, by nature of AWS and S3, not applicable. The below sections (organized by control family) provide a list of the applicable controls within that family, and link to documentation on how to implement settings within S3 that satisfy each control. 
 
-## AC Access Control
+# AC Access Control
 
-## AT Awareness and Training
+# AT Awareness and Training
 
-## AU Audit and Accountability
+# AU Audit and Accountability
 
-## CA Assessment, Authorization, and Monitoring
+# CA Assessment, Authorization, and Monitoring
 
-## CM Configuration Management
+# CM Configuration Management
+The CM family controls deals with managing the configuration of information systems. For S3 buckets, the below control is applicable: 
+- CM-5
 
-## CP Contingency Planning
+## Restricting Administrator Permissions in S3
+NIST 800-53 control CM-5 reads: 
+> Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system.
 
-## IA Identification and Authentication
-### IA-2 Identification and Authentication (organizational Users)
+This control deals with the limiting of administrators and privileged users who have the ability to make changes to physical or logical access. In this case, only logical access is at play since the resources are in the cloud.
+
+## Setting up a Bucket Policy to Limit Administrator Permissions
+Bucket policies are a feature of S3 buckets in AWS that allow you to grant or restrict access to S3 buckets, and they can even apply down to the object level within buckets.
+
+In order to restrict access to administrative-level actions on an S3 bucket, you would want to restrict the ability to modify or remove bucket policies and ACLs. There are AWS "Actions" that correspond to those three administrative actions. We can write a bucket policy which has an "Allow" effect for specified principals (AWS users).
+
+In order to more easily write up a bucket policy to block access to the bucket policy for certain administrators, we can use the AWS policy generator tool. The tool can be found here: https://awspolicygen.s3.amazonaws.com/policygen.html
+
+Once on the policy generator page, we select "S3" as the policy type. 
+
+![AWS Policy Generator](/assets/CM-9_Step1.png)
+
+# CP Contingency Planning
+
+# IA Identification and Authentication
+## IA-2 Identification and Authentication (organizational Users)
+Identifying individual users and authenticating those users so that you can restrict access and assign permissions appropriately is crucial. For S3 buckets, the below controls are applicable: 
+- IA-2
+- IA-2(1)
+- IA-2(2)
+
 NIST 800-53 control IA-2 reads: 
 > Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users.
 
