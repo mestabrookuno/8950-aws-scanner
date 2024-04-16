@@ -53,7 +53,7 @@ In order to more easily write up a bucket policy to block access to the bucket p
 
 Once on the policy generator page, we select "S3" as the policy type. 
 
-![AWS Policy Generator](/assets/CM-9_Step1.png)
+![AWS Policy Generator](/assets/CM-5_Step1.png)
 
 # CP Contingency Planning
 
