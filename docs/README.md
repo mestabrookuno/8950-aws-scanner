@@ -43,7 +43,7 @@ Not every individual control within each of the above control families is applic
 NIST 800-53 control IA-2 reads: 
 > Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users.
 
-You can implement IAM controls by following [these instructions](https://github.com/mestabrookuno/8950-aws-scanner/blob/da2d532ec43f1931e8cee783a566a2513ae308e3/docs/Identification%20and%20Authentication%20Controls.md). 
+You can implement IAM controls by following [these instructions](https://github.com/mestabrookuno/8950-aws-scanner/blob/da2d532ec43f1931e8cee783a566a2513ae308e3/docs/Identification%20and%20Authentication%20Controls.html). 
 
 ## MP Media Protection
 
