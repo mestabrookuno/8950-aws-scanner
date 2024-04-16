@@ -38,7 +38,7 @@ Not every individual control within each of the above control families is applic
 The CM family controls deals with managing the configuration of information systems. For S3 buckets, the below control is applicable: 
 - CM-5
 
-## Restricting Administrator Permissions in S3
+### Restricting Administrator Permissions in S3
 NIST 800-53 control CM-5 reads: 
 > Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system.
 
