@@ -6,7 +6,7 @@ NIST 800-53 control IA-2 reads:
 
 When looking at an S3 bucket, the primary means of enforcing authentication is to utilize the built-in AWS authentication mechanisms. User management is done through the IAM (Identity and Access Management) console from within the AWS Console. After logging in to the AWS console, you can select "IAM" from the list of AWS services. 
 
-![AWS Services Menu - Selecting IAM](./images/IA-1_IAMSelection.png)
+![AWS Services Menu - Selecting IAM](https://github.com/mestabrookuno/8950-aws-scanner/tree/1f9ad29cb0bf6408f3f983097b89fc622c3b8615/images/IA-1_IAMSelection.png)
 
 ## Implementing Multi-factor Authentication on AWS Accounts
 NIST 800-53 IA-2(1) reads: 
