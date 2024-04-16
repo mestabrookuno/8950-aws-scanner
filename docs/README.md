@@ -56,20 +56,20 @@ And IA-2(2) reads:
 
 To enable multi-factor authentication on an account in AWS, you first need to navigate to the IAM menu. Once you're there, click on "Users" on the left side in the menu. 
 
-[![AWS Services Menu - Users in IAM](/assets/IA-2_Step1.png)
+![AWS Services Menu - Users in IAM](/assets/IA-2_Step1.png)
 
 Next, click on the name of the user you wish to implement MFA for. Click on the "Security credentials" tab. 
 
-![AWS Users Security Credentials Menu](images/IA-2_Step2.png)
+![AWS Users Security Credentials Menu](assets/IA-2_Step2.png)
 
 Click on "Assign MFA device" and follow the prompts to set up either a virtual authenticator app (such as Google Authenticate) or a physical FIDO device (such as a Yubikey). 
 
-![AWS Users Set up MFA](images/IA-2_Step3.png)
+![AWS Users Set up MFA](assets/IA-2_Step3.png)
 
 Once that has been completed, MFA is enabled for that user. 
 
 ## Testing Multi-factor Authentication
-You can implement IAM controls by following [these instructions](Identification_and_Authentication.md). 
+
 
 ## MP Media Protection
 
