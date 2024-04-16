@@ -33,9 +33,26 @@ Not every individual control within each of the above control families is applic
 # AU Audit and Accountability
 
 # CA Assessment, Authorization, and Monitoring
+The CA family of controls deals with assessing the environment and access, authorizing access, and monitoring. The applicable control for S3 buckets is below: 
+- CA-9
+
+NIST 800-53 control CA-9 reads: 
+> Authorize internal connections of [organization-defined system components or classes of components] to the system;
+
+## Restricting Public Access to S3 Buckets
+In order to restrict connections to the S3 bucket from only internal sources, we can turn on the "Block Public Access" setting from within the S3 settings page. 
+
+![AWS Block Public Access Setting](/assets/CA-9_BlockPublicAccess.png)
+
+Doing this means that any external connections to the bucket would be blocked. This sort of configuration is appropriate for high and potentially medium-security baseline configurations. It would not be appropriate for low-security configurations that require public access for hosting files publicly.
+
+## Testing Public Access Restrictions
+In order to test CA-9, we first need to confirm that the bucket is not accessible publicly. We can verify this by logging into the AWS S3 console and going to the properties of the bucket in question. In the "Bucket overview" section we see that there is no public URL listed. This indicates that the bucket is not accessible publicly. 
+
+![AWS Public Access Disabled Screenshot](/assets/CA-9_NoPublicAccess.png)
 
 # CM Configuration Management
-The CM family controls deals with managing the configuration of information systems. For S3 buckets, the below control is applicable: 
+The CM family of controls deals with managing the configuration of information systems. For S3 buckets, the below control is applicable: 
 - CM-5
 
 ## Restricting Administrator Permissions in S3
