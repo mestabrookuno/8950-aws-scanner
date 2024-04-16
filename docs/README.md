@@ -24,3 +24,29 @@ The NIST 800-53 framework provides a list of 20 control families. The contributo
 - MP Media Protection
 - SC System and Communications Protection
 - SI System and Information Integrity
+
+Not every individual control within each of the above control families is applicable. In fact, most are, by nature of AWS and S3, not applicable. The below sections (organized by control family) provide a list of the applicable controls within that family, and link to documentation on how to implement settings within S3 that satisfy each control. 
+
+## AC Access Control
+
+## AT Awareness and Training
+
+## AU Audit and Accountability
+
+## CA Assessment, Authorization, and Monitoring
+
+## CM Configuration Management
+
+## CP Contingency Planning
+
+## IA Identification and Authentication
+### IA-2 Identification and Authentication (organizational Users)
+NIST 800-53 control IA-2 reads: 
+> Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users.
+
+
+## MP Media Protection
+
+## SC System and Communications Protection
+
+## SI System and Information Integrity
