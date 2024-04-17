@@ -180,6 +180,7 @@ The System and Communications Protection control focuses on safeguarding the int
 - SC-5
 - SC-8(1)
 - SC-12
+- SC-12(1)
 - SC-13
 - SC-28
 - SC-28(1)
@@ -217,9 +218,10 @@ To specifically enable the shield for a specific S3 bucket press on add resource
 **Monitor DDoS Events**: AWS Shield provides visibility into DDoS events and alerts through the AWS Management Console, CloudWatch alarms, and Amazon S3 access logs. It is good practice to monitor these channels regularly to stay informed about any DDoS activity targeting the S3 buckets and take appropriate action as necessary.[AWS Shield advanced update](https://aws.amazon.com/blogs/aws/aws-shield-advanced-update-automatic-application-layer-ddos-mitigation/).
 
 ## Enabling Server-Side Encryption (SSE) and Key Management Service (KMS) for AWS S3 buckets
-NIST 800-53 control SC-8,12,13,28 and 28(1) read:
+NIST 800-53 control SC-8,12,12(1),13,28 and 28(1) read:
 > - Protecting the confidentiality and integrity of transmitted information
 > - Establish and manage cryptographic keys when cryptography is employed within the system in accordance with key management requirements
+> - Maintain availability of information in the event of the loss of cryptographic keys by users.
 > - Cryptographic Protection
 > - Protect the information at rest
 > - Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of information at rest
