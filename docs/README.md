@@ -328,3 +328,9 @@ These controls focus on establishing and managing cryptographic keys used for en
 
 
 # SI System and Information Integrity
+The System and Information Integrity (SI) control provides guidelines for ensuring the integrity of system information. Essentially, it aims to protect against unauthorized changes to information within a system and ensures that systems operate correctly and securely. For S3 Buckets here are the controls that apply:
+- SI-4(2),(5),(12),(20)
+- SI-7
+- SI-7(1),(2),(5),(7)
+- SI-11
+- SI-12
