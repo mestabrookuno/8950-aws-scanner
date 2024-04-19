@@ -86,6 +86,8 @@ Once on the configuration page select your new logs bucket from the “Browse S3
 
 ![Server Logging Settings](images/AU-Server_Access_Logging.png)
 
+Logs will now generate and can be tested by making any changes on the chosen bucket, and checking the logs bucket to ensure data was created.
+
 # CA Assessment, Authorization, and Monitoring
 The CA family of controls deals with assessing the environment and access, authorizing access, and monitoring. The applicable control for S3 buckets is below: 
 - CA-9
