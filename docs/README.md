@@ -27,10 +27,31 @@ The NIST 800-53 framework provides a list of 20 control families. The contributo
 Not every individual control within each of the above control families is applicable. In fact, most are, by nature of AWS and S3, not applicable. The below sections (organized by control family) provide a list of the applicable controls within that family, and link to documentation on how to implement settings within S3 that satisfy each control. 
 
 # AC Access Control
-
-# AT Awareness and Training
+The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
+- AC-2(12)
+- AC-3
+- AC-6
+- AC-6(5)
+- AC-12
+- AC-14
+- AC-22
 
 # AU Audit and Accountability
+The AU control family comprises security controls related to an organization’s audit capabilities. The applicable control for S3 buckets is below: 
+- AU-1
+- AU-2
+- AU-3
+- AU-3(1)
+- AU-4
+- AU-8
+- AU-9
+- AU-9(3)
+- AU-9(4)
+- AU-10
+- AU-11
+- AU-12
+- AU-12(1)
+- AU-12(3)
 
 # CA Assessment, Authorization, and Monitoring
 The CA family of controls deals with assessing the environment and access, authorizing access, and monitoring. The applicable control for S3 buckets is below: 
