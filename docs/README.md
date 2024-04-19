@@ -45,7 +45,6 @@ The AU control family comprises security controls related to an organization’s
 - AU-9(3)
 - AU-9(4)
 - AU-10
-- AU-11
 - AU-12
 - AU-12(1)
 - AU-12(3)
@@ -78,7 +77,7 @@ In order to hold the logs we will need to create a new logging bucket. This can 
 
 Then we can navigate to the bucket that needs to be logged and select the properties tab. 
 
-![Server Logging Settings](docs/assets/AU-Properties_Tab.png)
+![Properties Tab Location](docs/assets/AU-Properties_Tab.png)
 
 On the Server Access Logging section we can choose edit then enable. 
 
@@ -87,6 +86,54 @@ Once on the configuration page select your new logs bucket from the “Browse S3
 ![Server Logging Settings](images/AU-Server_Access_Logging.png)
 
 Logs will now generate and can be tested by making any changes on the chosen bucket, and checking the logs bucket to ensure data was created.
+
+## CloudTrail
+Server Access logging will cover controls: AU-2, AU-10, AU-11, AU-12, AU-12(1), AU-12(3).
+These controls read as:
+
+AU-2:
+> Determines that the information system is capable of auditing the following events: [Assignment: organization-defined auditable events];
+
+AU-10:
+> The information system protects against an individual (or process acting on behalf of an individual) falsely denying having performed [Assignment: organization-defined actions to be covered by non-repudiation].
+
+AU-12:
+> Provides audit record generation capability for the auditable events defined in AU-2 at [Assignment: organization-defined information system components];
+Allows [Assignment: organization-defined personnel or roles] to select which auditable events are to be audited by specific components of the information system; and
+Generates audit records for the events defined in AU-2 d. with the content defined in AU-3.
+
+AU-12(1):
+> Compile audit records from [Assignment: organization-defined system components] into a system-wide (logical or physical) audit trail that is time-correlated to within [Assignment: organization-defined level of tolerance for the relationship between time stamps of individual records in the audit trail].
+
+AU-12(3):
+> The information system provides the capability for [Assignment: organization-defined individuals or roles] to change the auditing to be performed on [Assignment: organization-defined information system components] based on [Assignment: organization-defined selectable event criteria] within [Assignment: organization-defined time thresholds].
+
+In order to create an audit trail we will be using CloudTrail to do this we will:
+
+Navigate to the properties tab in your desired bucket.
+
+![Properties Tab Location](docs/assets/AU-Properties_Tab.png)
+
+Open the CloudTrail tab and select the trails tab
+
+Create a new trail and choose a name
+
+Either create a new logging bucket or use an existing S3 bucket designated for logging.
+
+Create a new name for your new KMS key or choose an existing KMS key from the drop down
+
+![Page 1 Settings](images/AU-CloudTrail_Settings_Page1.png)
+
+Navigate to the next page
+On the next page select Management Events, Data Events, and Insight Events
+
+![Top Half of Page 2 Settings](images/AU-CloudTrail_Settings_Page2(1).png)
+
+Under Data Events choose S3 from the drop down and log all events from the next drop down
+
+Under Insight Events select API Call Rate
+
+![Bottom Half of Page 2 Settings](images/AU-CloudTrail_Settings_Page2(2).png)
 
 # CA Assessment, Authorization, and Monitoring
 The CA family of controls deals with assessing the environment and access, authorizing access, and monitoring. The applicable control for S3 buckets is below: 
