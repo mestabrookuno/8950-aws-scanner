@@ -77,7 +77,8 @@ To cover these controls we will be enabling and configuring Server Access Loggin
 In order to hold the logs we will need to create a new logging bucket. This can be done by navigating to S3 within your AWS account and selecting "Create New Bucket".
 
 Then we can navigate to the bucket that needs to be logged and select the properties tab. 
-![Server Logging Settings](docs/assets/AU - Properties Tab.png)
+
+![Server Logging Settings](docs/assets/AU-Properties_Tab.png)
 
 On the Server Access Logging section we can choose edit then enable. 
 
