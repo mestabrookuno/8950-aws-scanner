@@ -78,7 +78,6 @@ In order to hold the logs we will need to create a new logging bucket. This can 
 Then we can navigate to the bucket that needs to be logged and select the properties tab. 
 
 ![Properties Tab Location](/assets/AU-ServerAccessLogging_1.png)
-![AWS Block Public Access Setting](/assets/CA-9_BlockPublicAccess.png)
 
 On the Server Access Logging section we can choose edit then enable. 
 
@@ -113,7 +112,7 @@ In order to create an audit trail we will be using CloudTrail to do this we will
 
 Navigate to the properties tab in your desired bucket.
 
-![Properties Tab Location](docs/assets/AU-Properties_Tab.png)
+![Properties Tab Location](/assets/AU-ServerAccessLogging_1.png)
 
 Open the CloudTrail tab and select the trails tab
 
