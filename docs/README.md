@@ -43,15 +43,15 @@ This can be acheived by simply allowing public access to specifc buckets.
 
 In order to do this we will need to create a specifc bucket designated for public access. Once we have the bucket we can navigate to the permissions tab within the bucket. 
 
-Image
+![Permissions Tab](/assets/AU-PermissionsTab.png)
 
 Once here we must find the "Block public access (bucket settings)" sections and select the edit option.
 
-Image
+![Edit for Blocking Public Access](/assets/AU-BlockPublicAccessEdit.png)
 
 Within the edit page you can deselect all options to allow for public access to the bucket. 
 
-Image
+![Settings Page for Public Bucket](/assets/AU-PublicBucketSettings.png)
 
 # AU Audit and Accountability
 The AU control family comprises security controls related to an organization’s audit capabilities. The applicable control for S3 buckets is below: 
