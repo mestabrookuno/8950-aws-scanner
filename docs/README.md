@@ -77,7 +77,7 @@ In order to hold the logs we will need to create a new logging bucket. This can 
 
 Then we can navigate to the bucket that needs to be logged and select the properties tab. 
 
-![Properties Tab Location](docs/assets/AU-ServerAccessLogging_1.png)
+![Properties Tab Location](/assets/AU-ServerAccessLogging_1.png)
 
 On the Server Access Logging section we can choose edit then enable. 
 
