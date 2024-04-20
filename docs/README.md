@@ -122,7 +122,7 @@ Either create a new logging bucket or use an existing S3 bucket designated for l
 
 Create a new name for your new KMS key or choose an existing KMS key from the drop down
 
-![Page 1 Settings](images/AU-CloudTrail_Settings_Page1.png)
+![Page 1 Settings](/assets/AU-CloudTrail_Settings_Page1.png)
 
 Navigate to the next page
 On the next page select Management Events, Data Events, and Insight Events
