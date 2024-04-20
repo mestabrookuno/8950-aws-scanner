@@ -30,11 +30,6 @@ Not every individual control within each of the above control families is applic
 The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
 - AC-2(12)
 - AC-3
-- AC-6
-- AC-6(5)
-- AC-12
-- AC-14
-- AC-22
 
 # AU Audit and Accountability
 The AU control family comprises security controls related to an organization’s audit capabilities. The applicable control for S3 buckets is below: 
