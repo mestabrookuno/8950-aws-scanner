@@ -83,7 +83,7 @@ On the Server Access Logging section we can choose edit then enable.
 
 Once on the configuration page select your new logs bucket from the “Browse S3” option. Then select the “[DestinationPrefix][SourceAccountId]/​[SourceRegion]/​[SourceBucket]/​[YYYY]/​[MM]/​[DD]/​[YYYY]-[MM]-[DD]-[hh]-[mm]-[ss]-[UniqueString]” option and ensure logs are created based on event time. If done correctly it should look like this. 
 
-![Server Logging Settings](images/AU-Server_Access_Logging.png)
+![Server Logging Settings](/assets/AU-Server_Access_Logging.png)
 
 Logs will now generate and can be tested by making any changes on the chosen bucket, and checking the logs bucket to ensure data was created.
 
