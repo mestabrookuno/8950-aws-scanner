@@ -321,7 +321,7 @@ To specifically enable the shield for a specific S3 bucket press on add resource
 **Monitor DDoS Events**: AWS Shield provides visibility into DDoS events and alerts through the AWS Management Console, CloudWatch alarms, and Amazon S3 access logs. It is good practice to monitor these channels regularly to stay informed about any DDoS activity targeting the S3 buckets and take appropriate action as necessary.[AWS Shield advanced update](https://aws.amazon.com/blogs/aws/aws-shield-advanced-update-automatic-application-layer-ddos-mitigation/).
 
 ## Enabling Server-Side Encryption (SSE) and Key Management Service (KMS) for AWS S3 buckets
-NIST 800-53 control SC-8,12,12(1),13,28 and 28(1) read:
+NIST 800-53 control SC-8,12,12(1),13,28 and 28(1) read respectfully:
 > - Protecting the confidentiality and integrity of transmitted information
 > - Establish and manage cryptographic keys when cryptography is employed within the system in accordance with key management requirements
 > - Maintain availability of information in the event of the loss of cryptographic keys by users.
@@ -437,3 +437,57 @@ The System and Information Integrity (SI) control provides guidelines for ensuri
 - SI-7(1),(2),(5),(7)
 - SI-11
 - SI-12
+ NIST 800-53 SI-4(2),(5),(12),(20), read respectfully:
+> - Employ automated tools and mechanisms to support near real-time analysis of events.
+> - Alert when the system-generated indications of compromise or potential compromise occur
+> - Alert using automated mechanisms when the indications of inappropriate or unusual activities with security or privacy implications occur
+> - Implement the following additional monitoring of privileged users.
+
+These controls focus on continuous monitoring of security controls and operational status in information systems including both real-time and periodic monitoring activities to detect and respond to security incidents. Activities like security status monitoring, monitoring security controls, system events, and security-related information to maintain situational awareness and promptly address emerging threats or vulnerabilities.
+
+*See Access Control: Server access login and Cloud trail implementation*
+
+NIST 800-53 SI-7,(1),(2),(5),(7) read respectfully:
+> - Employ integrity verification tools to detect unauthorized changes to the following software, firmware, and information
+> - Perform an integrity check
+> - Employ automated tools that provide notification to defined personnel upon discovering discrepancies during integrity verification.
+> - Automatically shut the system down; restart the system
+> - Incorporate the detection of unauthorized changes into the organizational incident response capability
+
+These controls focus on ensuring the effectiveness of security controls within an information system making sure that security controls are implemented correctly, operate as intended, and provide the necessary protection against security threats
+
+*See Access Control: Server access login and Cloud trail implementation*
+
+## AWS Simple Notification Services (SNS) for an AWS S3 Bucket
+
+**Sign in to the AWS Management Console:**
+   Go to the [AWS Management Console](https://aws.amazon.com/console/) and sign in to your AWS account.
+
+**Navigate to AWS S3:**
+   Go to the AWS S3 console by typing "S3" in the search bar at the top of the console or by finding it under the "Storage" section.
+
+**Select the S3 Bucket:**
+   Choose the S3 bucket for which you want to implement notifications using AWS SNS.
+
+**Enable Event Notifications:**
+   - Click on the "Properties" tab of the selected bucket.
+   - Scroll down to the "Events" section and click on "Create event notification."
+![image](https://github.com/mestabrookuno/8950-aws-scanner/assets/129107955/c743c30e-ef4a-4c23-994d-1078c5783956)
+
+
+**Configure Event Notification:**
+   - Enter a name for the notification configuration.
+   - Choose the event type(s) that will trigger notifications (ex: "All object create events").
+   - Optionally, specify object name prefixes or suffixes to filter the objects that trigger notifications.
+![image](https://github.com/mestabrookuno/8950-aws-scanner/assets/129107955/baff1245-5ca9-4457-a7f9-58393d6c918f)
+
+   - Select "Send to" as "SNS topic."
+   - Choose an existing SNS topic or create a new one.
+   
+![image](https://github.com/mestabrookuno/8950-aws-scanner/assets/129107955/c920948b-06c4-42c4-a5f4-52196d82a83c)
+
+- **Amazon S3 Lifecycle Policies**. With S3 Lifecycle Policies, you can define rules to automatically transition objects between different storage classes or expire objects based on certain criteria. This allows to optimize storage costs and performance by moving less frequently accessed data to lower-cost storage tiers or deleting outdated data after a specified retention period.
+
+  ![image](https://github.com/mestabrookuno/8950-aws-scanner/assets/129107955/912aeaca-31b5-4cd5-8e3c-fb687f5ee202)
+
+
