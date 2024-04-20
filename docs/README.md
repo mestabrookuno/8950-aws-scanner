@@ -49,7 +49,9 @@ Once here we must find the "Block public access (bucket settings)" sections and 
 
 Image
 
+Within the edit page you can deselect all options to allow for public access to the bucket. 
 
+Image
 
 # AU Audit and Accountability
 The AU control family comprises security controls related to an organization’s audit capabilities. The applicable control for S3 buckets is below: 
