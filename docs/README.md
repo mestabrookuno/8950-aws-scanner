@@ -133,7 +133,7 @@ Under Data Events choose S3 from the drop down and log all events from the next 
 
 Under Insight Events select API Call Rate
 
-![Bottom Half of Page 2 Settings](docs/assets/AU-CloudTrail_Settings_Page2_2.png)
+![Bottom Half of Page 2 Settings](assets/AU-CloudTrail_Settings_Page2_2.png)
 
 # CA Assessment, Authorization, and Monitoring
 The CA family of controls deals with assessing the environment and access, authorizing access, and monitoring. The applicable control for S3 buckets is below: 
