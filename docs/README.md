@@ -31,6 +31,14 @@ The AC Control Family consists of security requirements detailing system logging
 - AC-2(12)
 - AC-3
 
+AC-(12) Reads as:
+> Monitor system accounts for [Assignment: organization-defined atypical usage]; and Report atypical usage of system accounts to [Assignment: organization-defined personnel or roles].
+
+This control is covered later by CloudFlare and System Access logging. This information can be found in the next section of Audit and Accountability
+
+AC-3 Reads as: 
+> 
+
 # AU Audit and Accountability
 The AU control family comprises security controls related to an organization’s audit capabilities. The applicable control for S3 buckets is below: 
 - AU-2
