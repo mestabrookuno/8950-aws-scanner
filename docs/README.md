@@ -127,7 +127,7 @@ Create a new name for your new KMS key or choose an existing KMS key from the dr
 Navigate to the next page
 On the next page select Management Events, Data Events, and Insight Events
 
-![Top Half of Page 2 Settings](/assets/AU-CloudTrail_Settings_Page2(1).png)
+![Top Half of Page 2 Settings](/assets/AU-CloudTrail_Settings_Page2_1.png)
 
 Under Data Events choose S3 from the drop down and log all events from the next drop down
 
