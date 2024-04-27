@@ -12,23 +12,28 @@ Our baseline guideline has a few key goals:
 No matter the size of your organization, our baselines can help you navigate the complexities of securing S3 buckets in the cloud. Whether you're a large corporation or a small startup, having clear guidelines can make a world of difference in keeping your data safe.
 
 ## Table of content
-- [Framework Alignment and Control Family Applicability](#framework-alignment-and-control-family-applicability)
+- [Mapping NIST Framework Controls to Relevance in AWS S3](#mapping-nist-framework-controls-to-relevance-in-aws-s3)
+- [AC Access Control](#ac-access-control)
+- [AU Audit and Accountability](#au-audit-and-accountability)
+- [CA Assessment, Authorization, and Monitoring](#ca-assessment-authorization-and-monitoring)
+- [CP Contingency Planning](#cp-contingency-planning)
+- [IA Identification and Authentication](#ia-identification-and-authentication)
 - [SC System and Communications Protection](#sc-system-and-communications-protection)
-- 
-# Framework Alignment and Control Family Applicability
-The NIST 800-53 framework provides a list of 20 control families. The contributors to this project selected 10 control families that are applicable to S3 buckets. The list of applicable control families is below. 
+- [SI System and Information Integrity](#si-system-and-information-integrity)
+
+# Mapping NIST Framework Controls to Relevance in AWS S3
+NIST 800-53, formally titled "Security and Privacy Controls for Federal Information Systems and Organizations," is a publication by the National Institute of Standards and Technology (NIST) in the United States. It provides a comprehensive set of security and privacy controls and associated guidelines for federal information systems and organizations to protect their information and information systems. The NIST 800-53 framework provides a list of 20 control families. The contributors to this project selected 8 control families that apply to S3 buckets. The list of applicable control families is below.
+
 - AC Access Control
-- AT Awareness and Training
 - AU Audit and Accountability
 - CA Assessment, Authorization, and Monitoring
 - CM Configuration Management
 - CP Contingency Planning
 - IA Identification and Authentication
-- MP Media Protection
 - SC System and Communications Protection
 - SI System and Information Integrity
 
-Not every individual control within each of the above control families is applicable. In fact, most are, by nature of AWS and S3, not applicable. The below sections (organized by control family) provide a list of the applicable controls within that family, and link to documentation on how to implement settings within S3 that satisfy each control. 
+The below sections (organized by control family) provide a list of the applicable controls within each families, and link to documentation on how to implement settings within S3 that satisfy each control. 
 
 # AC Access Control
 The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
@@ -156,7 +161,7 @@ Under Insight Events select API Call Rate
 
 ![Bottom Half of Page 2 Settings](assets/AU-CloudTrail_Settings_Page2_2.png)
 
-# CA Assessment, Authorization, and Monitoring
+# CA Assessment Authorization and Monitoring
 The CA family of controls deals with assessing the environment and access, authorizing access, and monitoring. The applicable control for S3 buckets is below: 
 - CA-9
 
@@ -293,11 +298,6 @@ Click on "Assign MFA device" and follow the prompts to set up either a virtual a
 
 Once that has been completed, MFA is enabled for that user. 
 
-## Testing Multi-factor Authentication
-
-
-# MP Media Protection
-The MP family of controls deals with protecting information stored on various forms of media, such as digital, physical, or portable media. Because S3 buckets are a cloud-based storage solution provided by Amazon Web Services (AWS), and they operate within a different context compared to traditional physical or digital media, this control family is not applicable.
 
 # SC System and Communications Protection
 The System and Communications Protection control focuses on safeguarding the integrity, confidentiality, and availability of information systems and communications. For S3 Buckets here are the controls that apply:
@@ -466,7 +466,7 @@ The System and Information Integrity (SI) control provides guidelines for ensuri
 
 These controls focus on continuous monitoring of security controls and operational status in information systems including both real-time and periodic monitoring activities to detect and respond to security incidents. Activities like security status monitoring, monitoring security controls, system events, and security-related information to maintain situational awareness and promptly address emerging threats or vulnerabilities.
 
-*See Access Control: Server access login and Cloud trail implementation*
+*See [Access Control](#ac-access-control): Server access login and Cloudtrail implementation*
 
 NIST 800-53 SI-7,(1),(2),(5),(7) read respectfully:
 > - Employ integrity verification tools to detect unauthorized changes to the following software, firmware, and information
@@ -477,7 +477,7 @@ NIST 800-53 SI-7,(1),(2),(5),(7) read respectfully:
 
 These controls focus on ensuring the effectiveness of security controls within an information system making sure that security controls are implemented correctly, operate as intended, and provide the necessary protection against security threats
 
-*See Access Control: Server access login and Cloud trail implementation*
+*See [Access Control](#ac-access-control): Server access login and Cloudtrail implementation*
 
 ## AWS Simple Notification Services (SNS) for an AWS S3 Bucket
 
