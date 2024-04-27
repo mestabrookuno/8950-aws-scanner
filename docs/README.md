@@ -466,7 +466,7 @@ The System and Information Integrity (SI) control provides guidelines for ensuri
 
 These controls focus on continuous monitoring of security controls and operational status in information systems including both real-time and periodic monitoring activities to detect and respond to security incidents. Activities like security status monitoring, monitoring security controls, system events, and security-related information to maintain situational awareness and promptly address emerging threats or vulnerabilities.
 
-*See [Access Control](#ac-access-control): Server access login and Cloudtrail implementation*
+*See [Audit and Accountability](#au-audit-and-accountability): Server access login and Cloudtrail implementation*
 
 NIST 800-53 SI-7,(1),(2),(5),(7) read respectfully:
 > - Employ integrity verification tools to detect unauthorized changes to the following software, firmware, and information
@@ -477,7 +477,7 @@ NIST 800-53 SI-7,(1),(2),(5),(7) read respectfully:
 
 These controls focus on ensuring the effectiveness of security controls within an information system making sure that security controls are implemented correctly, operate as intended, and provide the necessary protection against security threats
 
-*See [Access Control](#ac-access-control): Server access login and Cloudtrail implementation*
+*See [Audit and Accountability](#au-audit-and-accountability): Server access login and Cloudtrail implementation*
 
 ## AWS Simple Notification Services (SNS) for an AWS S3 Bucket
 
