@@ -18,3 +18,6 @@ In summary:
 * A non-technical user was used as a tester to validate our instructions, and adjustments were made based upon their experience and feedback
 
 ## Hinderances
+As always, time was the biggest obstacle for this part of the project. We hit a sort of roadblock getting overwhelmed by the gravity of the project and we had a hard time deciding on a direction to move forward in. As a result, some time was wasted. We were able to meet as a group with Dr. Hale and move past that roadblock, and get on to producing our deliverable. 
+
+As mentioned above, motivation was another hinderance. This close to graduation, some level of "senior-itis" sets in, and our team was not immune. Again, productive team meetings and some nudges from Dr. Hale seemed to get us over that hump and on to a productive final stretch of the semester. 
