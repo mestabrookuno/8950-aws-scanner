@@ -4,7 +4,7 @@ The last third of this semester was focused on pulling together the settings we'
 
 Once the sum of the S3 settings and associated information was put together, we needed to produce a deliverable that relayed that information. We decided that the target audience should be that of non-AWS experts. Administrators who were responsible for securing S3 buckets but did not have much formal training in that specialty would benefit most from an easy-to-read guide detailing how to solve some of the most common security issues with S3. For that reason, we ended up taking a threat-centric approach in our document. Common S3 threats and configuration issues were spelled out, and detailed steps were provided for someone to follow to help remediate that issue or threat. All of this information was put into a GitHub Pages site that would be publicly accessible so that the information would be available via the Internet, and could be updated easily. 
 
-Site: !(S3 Security)[https://securing-s3-buckets.github.io/s3-security/]
+Site: ![S3 Security](https://securing-s3-buckets.github.io/s3-security/)
 
 ## Outcomes
 (brief overview of outcomes - what did you achieve?)
