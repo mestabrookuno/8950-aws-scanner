@@ -96,10 +96,6 @@ We had also come up with our research question by this time, which was "How well
 ### Milestone 3 / Final
 By the final milestone, we had cut down the list of control families even further. As we read through the families and their controls, and actually played around with implementing them in AWS, we found that there were even less control families applicable than we had originally thought. Each team member was responsible for a couple of control families. Each team member then developed a set of steps that would be required in AWS in order to implement the controls. 
 
-We needed a way to organize and present this information, as the goal of the project was to 
+We needed a way to organize and present this information, as the goal of the project was to share our findings for securing S3 buckets with the masses. We decided that the target audience should be that of non-AWS experts. Administrators who were responsible for securing S3 buckets but did not have much formal training in that specialty would benefit most from an easy-to-read guide detailing how to solve some of the most common security issues with S3. For that reason, we ended up taking a threat-centric approach in our document. Common S3 threats and configuration issues were spelled out, and detailed steps were provided for someone to follow to help remediate that issue or threat. All of this information was put into a GitHub Pages site that would be publicly accessible so that the information would be available via the Internet, and could be updated easily.
 
-(brief overview of outcomes - what did you achieve?, list milestone 1/2/3 outcomes, make an effort to logically collect and organize the findings)
-
-(bulleted lists can also be helpful to structure your results discussion)
-* outcome 1
-* outcome 2
+In the end, we found that there were not a ton of available settings to tweak to secure S3 buckets. However, we were able to produce a guide that would help a non-technical or non-AWS expert user adjust what settings were available to produce a more secure S3 bucket, and mitigate common vulnerabilities in S3. 
