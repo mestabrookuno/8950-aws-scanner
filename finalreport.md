@@ -2,18 +2,15 @@
 ## Executive Summary
 Cloud providers like Azure, Google, and AWS have changed the way organizations build out their infrastructure. By nature, the cloud tends to be more "open" due to the fact that it is operating on shared hardware owned by someone else (the cloud provider). This can present risks, though. One of the risks that has been widely publicized is that of overly permissive S3 buckets in AWS. There are plenty of news stories about data being leaked via an S3 bucket that was publicly shared unintentionally. These misconfigurations can lead to lawsuits, bad press, and other negative outcomes for businesses. There is a need for more detailed baselines for S3 buckets in order to minimize sensitive data leakage.
 
-The S3 Baseline Project aims to fix that problem of misconfigured S3 buckets leaking sensitive data by providing actionable baselines which security professionals and cloud administrators can use to secure their S3 buckets. The goals of this project are:
-
-Provide actionable baseline for administrators to aid in securing S3 buckets
-Meet the needs of various verticals by providing tailored baselines for different needs
-Banks may need more stringent configurations to ensure NO sensitive data is leaked
-Retail organizations may need moderately stringent configurations to minimize sensitive data leakage but still allow sharing of information publicly as needed
-Certain media outlets or other oganizations may need very little configuration due to the majority of data being published publicly anyway
-Test each level of baseline provided above against reasonable attack vectors against S3 buckets to provide some assurance that the framework provides value
-Organizations of all sizes would be able to benefit from having detailed baselines like those proposed above, in order to assist them in securing S3 buckets. Smaller organizations with less in-house cloud expertise would likely benefit most from these baselines, though. Having a proven baseline to guide the setup and configuration of S3 buckets would make it easier for organizations of any size to safely utilize cloud resources like S3 buckets.
+The S3 Baseline Project aims to fix that problem of misconfigured S3 buckets leaking sensitive data by providing actionable baselines which security professionals and cloud administrators can use to secure their S3 buckets. 
 
 ## Project Goals
-(high level project goals, reuse from milestone 1, update if scope changed)
+The project goals were: 
+- Come up with a list of best practice security hardening settings for S3 buckets
+- Present that information to the public, in a form that would be easily digested by less technical AWS administrators
+- Provide non-AWS experts with a resource to establish some level of security relating to their S3 buckets
+- Test the delivered guide with a real-world, non-technical user to determine usefulness and needed changes
+- Tweak the guide as needed to make it more understandable
 
 ## Project Methodology
 ## Literature Review:
@@ -76,6 +73,30 @@ One of the project members was available to observe the user. Things noted by th
 The user was then questioned about their experience, again surrounding the types of observations listed above. This information was taken back and discussed with the team. One of the main findings was that the guide was too verbose. That feedback was taken into account, and we ended up simplifying the guide. This was also when we reorganized the guide to center around threats instead of NIST control families. 
 
 ## Results / Findings
+### Kickoff / Milestone 1
+The first portion of the project focused on initial project planning. Starting with the initial idea, we started building out a project plan to accomplish the end goal of creating a set of baselines that would secure S3 buckets to a high, medium, or low level of security, according to the use case. We started by formalizing the goals of the project. Below were our original goals: 
+- Provide actionable baseline for administrators to aid in securing S3 buckets
+-   Meet the needs of various verticals by providing tailored baselines for different needs
+-   Banks may need more stringent configurations to ensure NO sensitive data is leaked
+-   Retail organizations may need moderately stringent configurations to minimize sensitive data leakage but still allow sharing of information publicly as needed
+-   Certain media outlets or other oganizations may need very little configuration due to the majority of data being published publicly anyway
+- Test each level of baseline provided above against reasonable attack vectors against S3 buckets to provide some assurance that the framework provides value
+
+We then mapped out a timeline. We knew the end date of the project (the end of the semester) and had planned out the sort of work we wanted to have done by each milestone. We also put together a couple of lists. One list contained the list of risks to our project. The list started with things like time limitations, lack of knowledge of team members on AWS and S3 security concepts, and legalities surrounding our intended penetration testing of the baselines. That list of risks evolved as the project went on, when we removed certain portions of the project like penetration testing. The same was true for the list of resources needed. There were resources that did not end up being needed as the scope of the project was pared down over the course of the semester. 
+
+We also wrote out a project methodology plan. At a high level we planned on: 
+1. Conducting a literature review to identify issues facing S3 buckets and what had been studied previously in this space
+2. Developing high, medium, and low security baselines each corresponding to various settings needed to enable that level of security on an S3 bucket
+3. Building out a sandbox environment to implement these baselines for further testing and verification
+4. Testing the baseline using Kali linux and various pen-testing tools to see if the settings worked to actually stop attacks
+5. Present the findings from our pentesting in a sort of "pen test" report, mapping out how well each configuration secured the S3 buckets in question
+6. Automate baseline implementation by using scripts to speed up the deployment
+
+We broke these goals down into individual tasks and started mapping them out in GitHub Project on a Kanban board, assigning resources as needed and tracking task progress. 
+
+### Milestone 2
+
+
 (brief overview of outcomes - what did you achieve?, list milestone 1/2/3 outcomes, make an effort to logically collect and organize the findings)
 
 (bulleted lists can also be helpful to structure your results discussion)
