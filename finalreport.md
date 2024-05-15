@@ -17,7 +17,7 @@ Organizations of all sizes would be able to benefit from having detailed baselin
 
 ## Project Methodology
 ## Literature Review:
-In order to get a sense of what work had already been done in the S3 bucket space a thorough literature review was started and is in progress. The literature review as it pertains to this project is broken up into two pieces: 
+In order to get a sense of what work had already been done in the S3 bucket space a thorough literature review was performed. The literature review as it pertains to this project is broken up into two pieces: 
 1. Gather information on common security best practices, industry standards, and regulatory requirements related to securing S3 buckets
 2. Analyze past security incidents and data breaches involving misconfigured S3 buckets to identify common attack vectors and vulnerabilities
 
@@ -40,6 +40,7 @@ Some tools were found to be potentially helpful as well. Those tools will be con
 
 ## Technical Plan
 This project aims to bolster S3 bucket security. In order to do that, the project was split into five key sections, each complete with subtasks needed to accomplish the overall goal, all listed below. 
+
 ### Step 1 - Develop the Baseline
 Starting with the NIST SP800-53 control families, a subset of control families that is applicable to S3 was decided upon. We then went through each control within those families and decided which ones were applicable to S3. That smaller list of controls was then organized by common threats to S3 buckets. 
 
@@ -62,8 +63,17 @@ Once the applicable settings were figured out, we set out to put the findings in
 
 Then, another section of the guide was written that mapped the applicable NIST controls to their appropriate sections. For example, if I wanted to make sure I satisfied a certain NIST control, I would look it up in the NIST mapping section of the guide and find what steps I needed to implement to make sure the control was in place. 
 
+We went through multiple iterations of the guide. At first the guide was centered around the NIST controls, but we ended up revising it and centering it around threats instead, to make the guide more user-friendly. 
+
 ### Step 4 - User Testing
-A non-IT user was recruited to test out the guide. 
+A non-IT user was recruited to test out the guide. The user was asked to sit down in front of a machine and follow the guide, actually clicking the buttons to implement the settings specified in the guide. 
+
+One of the project members was available to observe the user. Things noted by the observer included: 
+- Frustration level of the user
+- Speed with which the user was able to implement the prescribed settings
+- Difficulties encountered with the instructions, or the AWS interface
+
+The user was then questioned about their experience, again surrounding the types of observations listed above. 
 
 ### Step 4 - Review and Display Results
 
