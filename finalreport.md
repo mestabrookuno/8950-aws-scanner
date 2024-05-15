@@ -65,7 +65,7 @@ Then, another section of the guide was written that mapped the applicable NIST c
 
 We went through multiple iterations of the guide. At first the guide was centered around the NIST controls, but we ended up revising it and centering it around threats instead, to make the guide more user-friendly. 
 
-### Step 4 - User Testing
+### Step 4 - User Testing and Guide Tweaks
 A non-IT user was recruited to test out the guide. The user was asked to sit down in front of a machine and follow the guide, actually clicking the buttons to implement the settings specified in the guide. 
 
 One of the project members was available to observe the user. Things noted by the observer included: 
@@ -73,9 +73,7 @@ One of the project members was available to observe the user. Things noted by th
 - Speed with which the user was able to implement the prescribed settings
 - Difficulties encountered with the instructions, or the AWS interface
 
-The user was then questioned about their experience, again surrounding the types of observations listed above. 
-
-### Step 4 - Review and Display Results
+The user was then questioned about their experience, again surrounding the types of observations listed above. This information was taken back and discussed with the team. One of the main findings was that the guide was too verbose. That feedback was taken into account, and we ended up simplifying the guide. This was also when we reorganized the guide to center around threats instead of NIST control families. 
 
 ## Results / Findings
 (brief overview of outcomes - what did you achieve?, list milestone 1/2/3 outcomes, make an effort to logically collect and organize the findings)
@@ -83,14 +81,3 @@ The user was then questioned about their experience, again surrounding the types
 (bulleted lists can also be helpful to structure your results discussion)
 * outcome 1
 * outcome 2
-
-## Install Instructions (if applicable)
-### Requirements
-(list of any software / hardware requirements necessary to run the code/app/etc)
-
-### Installation Instructions
-(list of steps to install the product/app/code/etc)
-
-### Getting started
-(list of any steps to run the code after installation and/or manage the apps over their lifecycle)
-
